@@ -51,16 +51,16 @@
     <section style="background:#ffffff;position:relative;overflow:hidden">
       <div style="max-width:1600px;margin:0 auto;position:relative">
         <div style="{{ hGlow }}"></div>
-        <div style="{{ hPhoto }}"><div data-h="par" style="position:absolute;inset:0;will-change:transform"><div style="position:absolute;inset:0"><div style="position:absolute;inset:0;background:url(hero.png) {{ hPos }}/cover;animation:b-kb 18s ease-in-out infinite alternate"></div></div></div></div>
+        <div style="{{ hPhoto }}"><div data-h="par" style="position:absolute;inset:0;will-change:transform"><div style="position:absolute;inset:0"><div style="position:absolute;inset:0;background:url(hero.png?v=5) {{ hPos }}/cover;animation:b-kb 18s ease-in-out infinite alternate"></div></div></div></div>
         
         
         <div style="{{ hShade }}"></div>
         <div style="{{ hText }}">
           <span style="font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:#00808a;animation:b-rise .8s cubic-bezier(.2,.8,.2,1) .2s both">{{ t.sub }} · Novi Sad</span>
-          <h1 aria-label="{{ heroAria }}" style="margin:0;font-size:clamp(30px,min(4.2vw,7.4vh),80px);line-height:0.98;letter-spacing:-0.025em;font-weight:800;text-transform:uppercase;color:#00363b">
+          <h1 aria-label="{{ heroAria }}" style="margin:0;font-size:clamp(28px,min(4vw,6.2vh),76px);line-height:0.98;letter-spacing:-0.025em;font-weight:800;text-transform:uppercase;color:#00363b">
             <sc-for list="{{ wordsA }}" as="w" hint-placeholder-count="3"><span style="{{ w.style }}">{{ w.t }}</span></sc-for><em style="font-weight:800;font-style:normal;color:#00808a"><sc-for list="{{ wordsB }}" as="w" hint-placeholder-count="2"><span style="{{ w.style }}">{{ w.t }}</span></sc-for></em>
           </h1>
-          <p style="margin:0;font-size:clamp(16px,min(1.7vw,2.5vh),21px);line-height:1.5;max-width:36ch;color:#00363b;animation:b-rise .8s cubic-bezier(.2,.8,.2,1) 1.3s both">{{ t.heroSub }}</p>
+          <p style="margin:0;font-size:clamp(15px,min(1.6vw,2.3vh),20px);line-height:1.45;max-width:44ch;color:#00363b;animation:b-rise .8s cubic-bezier(.2,.8,.2,1) 1.3s both">{{ t.heroSub }}</p>
           <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;width:100%;max-width:520px;animation:b-rise .8s cubic-bezier(.2,.8,.2,1) 1.5s both">
             <sc-for list="{{ trust }}" as="tr" hint-placeholder-count="3">
               <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;padding:10px 6px 9px;border-radius:20px;background:#ffffff;border:1px solid var(--color-accent-200);box-shadow:var(--shadow-sm)"><span style="width:44px;height:44px;border-radius:50%;background:var(--color-accent-100);box-shadow:inset 0 0 0 1px var(--color-accent-200);display:grid;place-items:center"><i class="ph-duotone {{ tr.icon }}" style="font-size:24px;color:var(--color-accent-700)"></i></span><span style="font-size:13px;line-height:1.25;color:var(--color-accent-900)">{{ tr.label }}</span></div>
@@ -412,12 +412,12 @@ class Component extends DCLogic {
       hGlow: { display: "none" },
       hPhoto: { position: "absolute", top: 0, right: 0, height: mob ? 420 : "100%", width: mob ? "100%" : "58%", WebkitMaskImage: mob ? "linear-gradient(to bottom,#000 70%,transparent 100%)" : "linear-gradient(to right,transparent 0,#000 26%),linear-gradient(to top,transparent 0,#000 14%)", maskImage: mob ? "linear-gradient(to bottom,#000 70%,transparent 100%)" : "linear-gradient(to right,transparent 0,#000 26%),linear-gradient(to top,transparent 0,#000 14%)", WebkitMaskComposite: "source-in", maskComposite: "intersect" },
       hShade: { position: "absolute", inset: 0, zIndex: 1, pointerEvents: "none", display: mob ? "none" : "block", background: "linear-gradient(90deg,#ffffff 0,#ffffff 40%,rgba(255,255,255,0.6) 48%,transparent 58%)" },
-      hText: { position: "relative", zIndex: 2, boxSizing: "border-box", width: mob ? "auto" : "46%", minHeight: mob ? "auto" : "max(500px, calc(100svh - 166px))", padding: mob ? "340px clamp(20px,5vw,72px) 48px" : "28px clamp(20px,5vw,72px)", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "flex-start", gap: mob ? "clamp(18px,2.4vw,30px)" : "clamp(12px,2.2vh,26px)" },
+      hText: { position: "relative", zIndex: 2, boxSizing: "border-box", width: mob ? "auto" : "46%", minHeight: mob ? "auto" : "max(500px, calc(100svh - 166px))", padding: mob ? "340px clamp(20px,5vw,72px) 48px" : "20px clamp(20px,5vw,72px)", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "flex-start", gap: mob ? "clamp(18px,2.4vw,30px)" : "clamp(8px,1.6vh,20px)" },
       heroAria: (t.heroA + " " + t.heroB).split("|").join(" "),
       wordsA: t.heroA.split("|").map((w, i) => ({ t: w, style: { display: "block", whiteSpace: "nowrap", animation: "b-rise .8s cubic-bezier(.2,.8,.2,1) " + (0.5 + i * 0.18) + "s both" } })),
       wordsB: t.heroB.split("|").map((w, i) => ({ t: w, style: { display: "block", whiteSpace: "nowrap", animation: "b-rise .8s cubic-bezier(.2,.8,.2,1) " + (0.9 + i * 0.18) + "s both" } })),
       trust: t.trust.map((label, i) => ({ label, icon: ["ph-heart", "ph-shield-plus", "ph-clock"][i] })),
-      team: [{ id: "srdjan", name: "Srđan Japuš", img: "tim-srdjan.png" }, { id: "petar", name: "Petar Božić", img: "tim-petar.png" }],
+      team: [{ id: "srdjan", name: "Srđan Japuš", img: "tim-srdjan.png?v=5" }, { id: "petar", name: "Petar Božić", img: "tim-petar.png?v=5" }],
       gallery: Array.from({ length: 13 }, (_, i) => ({ style: { aspectRatio: "1", borderRadius: "var(--radius-md)", backgroundColor: "var(--color-neutral-200)", backgroundImage: "url(p" + (i + 2) + ".png)", backgroundSize: "cover", backgroundPosition: "center", boxShadow: "var(--shadow-sm)" } })),
       langs: ["sr", "en", "ru"].map(code => ({ label: code.toUpperCase(), onClick: () => { localStorage.setItem("basna-lang", code); this.setState({ lang: code }); },
         style: { font: "inherit", fontSize: 13, fontWeight: 600, letterSpacing: "0.04em", cursor: "pointer", border: 0, borderRadius: 999, padding: "4px 10px", minWidth: 36, background: code === L ? "var(--color-accent-700)" : "transparent", color: code === L ? "var(--color-bg)" : "var(--color-accent-900)" } })),
