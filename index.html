@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/duotone/style.css">
 <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
 <script src="ds-bundle.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap">
 <script src="./image-slot.js"></script>
@@ -34,7 +35,7 @@
       <span style="display:flex;flex-direction:column;gap:2px"><span style="font-size:clamp(26px,6vw,32px);line-height:1;letter-spacing:-0.01em">basna</span><span style="font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#00545b">{{ t.sub }}</span></span>
     </a><sc-if value="{{ narrowHome }}" hint-placeholder-val="{{ false }}"><button type="button" onClick="{{ toggleMenu }}" aria-label="Meni" style="all:unset;cursor:pointer;color:#00363b;align-self:flex-start;padding:2px 0;line-height:0"><i class="ph ph-list" style="font-size:30px"></i></button></sc-if></div>
     <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
-      <sc-for list="{{ nav }}" as="n" hint-placeholder-count="8"><a href="#" onClick="{{ n.onClick }}" style="align-self:center;font-size:15px;color:#00363b;text-decoration:none;white-space:nowrap;padding:7px 11px;border-radius:999px;transition:background 180ms" style-hover="background:#33dddd">{{ n.label }}</a></sc-for>
+      <sc-for list="{{ nav }}" as="n" hint-placeholder-count="9"><a href="#" onClick="{{ n.onClick }}" style="align-self:center;font-size:15px;color:#00363b;text-decoration:none;white-space:nowrap;padding:7px 11px;border-radius:999px;transition:background 180ms" style-hover="background:#33dddd">{{ n.label }}</a></sc-for>
     </sc-if>
     <a class="btn" href="{{ c.tel }}" aria-label="{{ t.callLong }}" style="background:#33dddd;border-color:#33dddd;margin-left:clamp(12px,2vw,28px);flex:none;align-self:{{ callAlign }};color:#00363b;font-size:clamp(12px,3vw,16px);padding:clamp(9px,1.4vw,11px) clamp(11px,2.4vw,22px);border-radius:999px;white-space:nowrap;gap:8px"><i class="ph-duotone ph-phone-call vp-ring" style="font-size:20px;display:inline-block;animation:vp-ring 7s ease-in-out infinite 2s"></i>{{ t.call }}</a>
     
@@ -50,7 +51,7 @@
     <section style="background:#ffffff;position:relative;overflow:hidden">
       <div style="max-width:1600px;margin:0 auto;position:relative">
         <div style="{{ hGlow }}"></div>
-        <div style="{{ hPhoto }}"><div data-h="par" style="position:absolute;inset:0;will-change:transform"><div style="position:absolute;inset:0"><div style="position:absolute;inset:0;background:url(p1.png) {{ hPos }}/cover;animation:b-kb 18s ease-in-out infinite alternate"></div></div></div></div>
+        <div style="{{ hPhoto }}"><div data-h="par" style="position:absolute;inset:0;will-change:transform"><div style="position:absolute;inset:0"><div style="position:absolute;inset:0;background:url(hero.png) {{ hPos }}/cover;animation:b-kb 18s ease-in-out infinite alternate"></div></div></div></div>
         
         
         <div style="{{ hShade }}"></div>
@@ -62,9 +63,10 @@
           <p style="margin:0;font-size:clamp(16px,min(1.7vw,2.5vh),21px);line-height:1.5;max-width:36ch;color:#00363b;animation:b-rise .8s cubic-bezier(.2,.8,.2,1) 1.3s both">{{ t.heroSub }}</p>
           <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;width:100%;max-width:520px;animation:b-rise .8s cubic-bezier(.2,.8,.2,1) 1.5s both">
             <sc-for list="{{ trust }}" as="tr" hint-placeholder-count="3">
-              <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;padding:12px 8px 10px;border-radius:22px;background:#ffffff;border:1px solid var(--color-accent-200);box-shadow:var(--shadow-sm)"><span style="width:52px;height:52px;border-radius:50%;background:var(--color-accent-100);box-shadow:inset 0 0 0 1px var(--color-accent-200);display:grid;place-items:center"><i class="ph-duotone {{ tr.icon }}" style="font-size:28px;color:var(--color-accent-700)"></i></span><span style="font-size:14px;line-height:1.3;color:var(--color-accent-900)">{{ tr.label }}</span></div>
+              <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;padding:10px 6px 9px;border-radius:20px;background:#ffffff;border:1px solid var(--color-accent-200);box-shadow:var(--shadow-sm)"><span style="width:44px;height:44px;border-radius:50%;background:var(--color-accent-100);box-shadow:inset 0 0 0 1px var(--color-accent-200);display:grid;place-items:center"><i class="ph-duotone {{ tr.icon }}" style="font-size:24px;color:var(--color-accent-700)"></i></span><span style="font-size:13px;line-height:1.25;color:var(--color-accent-900)">{{ tr.label }}</span></div>
             </sc-for>
           </div>
+          <a href="#" onClick="{{ toReviews }}" style="display:flex;align-items:center;gap:16px;padding:14px 24px;border-radius:999px;background:#ffffff;border:1px solid var(--color-accent-200);box-shadow:var(--shadow-sm);text-decoration:none;color:var(--color-text);animation:b-rise .8s cubic-bezier(.2,.8,.2,1) 1.5s both"><span style="font-size:40px;font-weight:800;line-height:1;color:var(--color-accent-900)">{{ t.ratingNum }}</span><span style="display:flex;flex-direction:column;gap:3px"><span style="display:flex;gap:2px"><i class="ph-fill ph-star" style="font-size:22px;color:#f5b301"></i><i class="ph-fill ph-star" style="font-size:22px;color:#f5b301"></i><i class="ph-fill ph-star" style="font-size:22px;color:#f5b301"></i><i class="ph-fill ph-star" style="font-size:22px;color:#f5b301"></i><i class="ph-fill ph-star" style="font-size:22px;color:#f5b301"></i></span><span style="font-size:15px;color:var(--color-neutral-800)">{{ t.ratingOn }}</span></span></a>
         </div>
       </div>
     </section>
@@ -86,12 +88,28 @@
 
     
 
-    <section id="b-cenovnik" style="background:var(--color-bg);border-radius:50% 50% 0 0 / 56px 56px 0 0;margin-top:-40px;position:relative;padding:72px max(clamp(20px,5vw,72px), calc((100% - 1600px) / 2 + clamp(20px,5vw,72px))) 80px;display:flex;flex-direction:column;gap:32px">
+    <section id="b-recenzije" style="background:var(--color-bg);border-radius:50% 50% 0 0 / 56px 56px 0 0;margin-top:-40px;position:relative;padding:72px max(clamp(20px,5vw,72px), calc((100% - 1600px) / 2 + clamp(20px,5vw,72px))) 80px;display:flex;flex-direction:column;gap:32px">
+      <div style="display:flex;flex-wrap:wrap;gap:20px 48px;align-items:center;justify-content:space-between">
+        <h2 style="margin:0;font-size:clamp(34px,4vw,44px)">{{ t.reviewsTitle }}</h2>
+        <div style="display:flex;align-items:center;gap:14px;padding:12px 22px;border-radius:999px;background:var(--color-accent-100)"><span style="font-size:32px;font-weight:800;line-height:1;color:var(--color-accent-900)">{{ t.ratingNum }}</span><span style="display:flex;flex-direction:column;gap:2px"><span style="display:flex;gap:2px"><i class="ph-fill ph-star" style="font-size:22px;color:#f5b301"></i><i class="ph-fill ph-star" style="font-size:22px;color:#f5b301"></i><i class="ph-fill ph-star" style="font-size:22px;color:#f5b301"></i><i class="ph-fill ph-star" style="font-size:22px;color:#f5b301"></i><i class="ph-fill ph-star" style="font-size:22px;color:#f5b301"></i></span><span style="font-size:14px;color:var(--color-neutral-800)">{{ t.ratingOn }}</span></span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px">
+        <sc-for list="{{ reviews }}" as="r" hint-placeholder-count="3">
+          <figure style="margin:0;display:flex;flex-direction:column;gap:18px;padding:28px;border-radius:24px;background:var(--color-accent-100)">
+            <span style="width:48px;height:48px;border-radius:50%;background:var(--color-bg);display:grid;place-items:center;flex:none"><i class="ph-duotone ph-quotes" style="font-size:26px;color:var(--color-accent-700)"></i></span>
+            <blockquote style="margin:0;flex:1;font-size:19px;line-height:1.55;color:var(--color-text)">{{ r.q }}</blockquote>
+            <figcaption style="display:flex;flex-direction:column;gap:6px"><span style="display:flex;gap:2px"><i class="ph-fill ph-star" style="font-size:16px;color:#f5b301"></i><i class="ph-fill ph-star" style="font-size:16px;color:#f5b301"></i><i class="ph-fill ph-star" style="font-size:16px;color:#f5b301"></i><i class="ph-fill ph-star" style="font-size:16px;color:#f5b301"></i><i class="ph-fill ph-star" style="font-size:16px;color:#f5b301"></i></span><span style="font-size:16px;font-weight:700">{{ r.a }}</span></figcaption>
+          </figure>
+        </sc-for>
+      </div>
+    </section>
+
+    <section id="b-cenovnik" style="background:var(--color-accent-100);border-radius:50% 50% 0 0 / 56px 56px 0 0;margin-top:-40px;position:relative;padding:72px max(clamp(20px,5vw,72px), calc((100% - 1600px) / 2 + clamp(20px,5vw,72px))) 80px;display:flex;flex-direction:column;gap:32px">
       <div style="display:flex;flex-direction:column;gap:12px;max-width:640px"><h2 style="margin:0;font-size:clamp(34px,4vw,44px)">{{ vt.homePrices }}</h2><p style="margin:0;font-size:18px;line-height:1.6;color:var(--color-neutral-800)">{{ vt.priceNote }}</p></div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px">
         <sc-for list="{{ priceGroups }}" as="g" hint-placeholder-count="3">
-          <div style="display:flex;flex-direction:column;gap:14px;padding:26px;border-radius:24px;background:var(--color-accent-100)">
-            <span style="display:flex;align-items:center;gap:12px"><span style="width:48px;height:48px;border-radius:50%;background:var(--color-bg);display:grid;place-items:center;flex:none"><i class="ph-duotone {{ g.icon }}" style="font-size:26px;color:var(--color-accent-700)"></i></span><span style="font-size:21px;font-weight:600;line-height:1.2">{{ g.name }}</span></span>
+          <div style="display:flex;flex-direction:column;gap:14px;padding:26px;border-radius:24px;background:var(--color-bg);box-shadow:var(--shadow-sm)">
+            <span style="display:flex;align-items:center;gap:12px"><span style="width:48px;height:48px;border-radius:50%;background:var(--color-accent-100);display:grid;place-items:center;flex:none"><i class="ph-duotone {{ g.icon }}" style="font-size:26px;color:var(--color-accent-700)"></i></span><span style="font-size:21px;font-weight:600;line-height:1.2">{{ g.name }}</span></span>
             <div style="display:flex;flex-direction:column;gap:10px">
               <sc-for list="{{ g.rows }}" as="r" hint-placeholder-count="3"><span style="display:flex;justify-content:space-between;gap:16px;align-items:baseline;font-size:16px;line-height:1.4"><span>{{ r.name }}</span><span style="font-weight:600;color:var(--color-accent-700);white-space:nowrap">{{ r.price }}</span></span></sc-for>
             </div>
@@ -101,19 +119,19 @@
     <a class="btn btn-primary" href="#/cenovnik" onClick="{{ goPrices }}" style="align-self:center;color:var(--color-bg);font-size:17px;padding:14px 28px;border-radius:999px;white-space:nowrap">{{ vt.allPrices }}</a>
     </section>
 
-    <section id="b-tim" style="background:var(--color-accent-100);border-radius:50% 50% 0 0 / 56px 56px 0 0;margin-top:-40px;position:relative;padding:72px max(clamp(20px,5vw,72px), calc((100% - 1600px) / 2 + clamp(20px,5vw,72px))) 80px;display:flex;flex-direction:column;gap:32px">
+    <section id="b-tim" style="background:var(--color-bg);border-radius:50% 50% 0 0 / 56px 56px 0 0;margin-top:-40px;position:relative;padding:72px max(clamp(20px,5vw,72px), calc((100% - 1600px) / 2 + clamp(20px,5vw,72px))) 80px;display:flex;flex-direction:column;gap:32px">
       <div style="display:flex;flex-direction:column;gap:12px;max-width:640px"><h2 style="margin:0;font-size:clamp(34px,4vw,44px)">{{ t.teamTitle }}</h2><p style="margin:0;font-size:18px;line-height:1.6;color:var(--color-neutral-800)">{{ t.teamLead }}</p></div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),280px));gap:32px 32px">
         <sc-for list="{{ team }}" as="m" hint-placeholder-count="2">
           <figure style="margin:0;display:flex;flex-direction:column;gap:12px">
-            <div style="overflow:hidden;border-radius:var(--radius-md);box-shadow:var(--shadow-sm);background:var(--color-bg)"><div style="aspect-ratio:4/5"><image-slot id="basna-tim-{{ m.id }}" shape="rect" fit="cover" placeholder="Prevucite portret"></image-slot></div></div>
-            <figcaption style="display:flex;flex-direction:column;gap:4px"><span style="font-size:24px;font-weight:600;line-height:1.2">{{ m.name }}</span><span style="font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700)">{{ t.vet }}</span></figcaption>
+            <div style="overflow:hidden;border-radius:var(--radius-md);box-shadow:var(--shadow-sm);background:var(--color-bg)"><div style="aspect-ratio:4/5"><image-slot id="basna-tim-{{ m.id }}" shape="rect" fit="cover" src="{{ m.img }}" placeholder="Prevucite portret"></image-slot></div></div>
+            <figcaption style="display:flex;flex-direction:column;gap:4px"><span style="font-size:26px;font-weight:800;line-height:1.2;letter-spacing:-0.01em">{{ m.name }}</span><span style="font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700)">{{ t.vet }}</span></figcaption>
           </figure>
         </sc-for>
       </div>
     </section>
 
-    <section id="b-pacijenti" style="background:var(--color-bg);border-radius:50% 50% 0 0 / 56px 56px 0 0;margin-top:-40px;position:relative;padding:72px max(clamp(20px,5vw,72px), calc((100% - 1600px) / 2 + clamp(20px,5vw,72px))) 80px;display:flex;flex-direction:column;gap:32px">
+    <section id="b-pacijenti" style="background:var(--color-accent-100);border-radius:50% 50% 0 0 / 56px 56px 0 0;margin-top:-40px;position:relative;padding:72px max(clamp(20px,5vw,72px), calc((100% - 1600px) / 2 + clamp(20px,5vw,72px))) 80px;display:flex;flex-direction:column;gap:32px">
       <h2 style="margin:0;font-size:clamp(34px,4vw,44px)">{{ vt.homePatientsTitle }}</h2>
       <div style="position:relative">
         <div ref="{{ sliderRef }}" onPointerDown="{{ dragDown }}" onPointerUp="{{ dragUp }}" style="overflow:hidden;border-radius:var(--radius-md);touch-action:pan-y;cursor:grab">
@@ -125,7 +143,7 @@
     <a class="btn btn-primary" href="#/pacijenti" onClick="{{ goGallery }}" style="align-self:center;color:var(--color-bg);font-size:17px;padding:14px 28px;border-radius:999px;white-space:nowrap">{{ vt.allPatients }}</a>
     </section>
 
-    <section id="b-blog" style="background:var(--color-accent-100);border-radius:50% 50% 0 0 / 56px 56px 0 0;margin-top:-40px;position:relative;padding:72px max(clamp(20px,5vw,72px), calc((100% - 1600px) / 2 + clamp(20px,5vw,72px))) 80px;display:flex;flex-direction:column;gap:32px">
+    <section id="b-blog" style="background:var(--color-bg);border-radius:50% 50% 0 0 / 56px 56px 0 0;margin-top:-40px;position:relative;padding:72px max(clamp(20px,5vw,72px), calc((100% - 1600px) / 2 + clamp(20px,5vw,72px))) 80px;display:flex;flex-direction:column;gap:32px">
       <h2 style="margin:0;font-size:clamp(34px,4vw,44px)">{{ vt.blogTitle }}</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:40px">
         <sc-for list="{{ articles }}" as="a" hint-placeholder-count="3">
@@ -139,7 +157,7 @@
       </div>
     </section>
 
-    <section id="b-faq" style="background:var(--color-bg);border-radius:50% 50% 0 0 / 56px 56px 0 0;margin-top:-40px;position:relative;padding:72px max(clamp(20px,5vw,72px), calc((100% - 1600px) / 2 + clamp(20px,5vw,72px))) 80px;display:flex;flex-wrap:wrap;gap:40px 72px;align-items:flex-start">
+    <section id="b-faq" style="background:var(--color-accent-100);border-radius:50% 50% 0 0 / 56px 56px 0 0;margin-top:-40px;position:relative;padding:72px max(clamp(20px,5vw,72px), calc((100% - 1600px) / 2 + clamp(20px,5vw,72px))) 80px;display:flex;flex-wrap:wrap;gap:40px 72px;align-items:flex-start">
       <div style="flex:1 1 280px;display:flex;flex-direction:column;gap:16px">
         <h2 style="margin:0;font-size:clamp(34px,4vw,44px);letter-spacing:-0.025em;color:var(--color-accent-900)">{{ vt.faqTitle }}</h2>
         <a class="btn btn-primary" href="{{ c.tel }}" style="align-self:flex-start;color:var(--color-bg);font-size:16px;padding:12px 22px;border-radius:999px;white-space:nowrap"><i class="ph-duotone ph-phone-call" style="font-size:18px;transform-origin:50% 72%;animation:vp-ring 2.6s ease-in-out infinite"></i>{{ t.call }}</a>
@@ -154,7 +172,7 @@
       </div>
     </section>
 
-    <section id="b-kontakt" style="background:var(--color-accent-100);border-radius:50% 50% 0 0 / 56px 56px 0 0;margin-top:-40px;position:relative;padding:72px max(clamp(20px,5vw,72px), calc((100% - 1600px) / 2 + clamp(20px,5vw,72px))) 80px;display:flex;flex-direction:column;gap:32px">
+    <section id="b-kontakt" style="background:var(--color-bg);border-radius:50% 50% 0 0 / 56px 56px 0 0;margin-top:-40px;position:relative;padding:72px max(clamp(20px,5vw,72px), calc((100% - 1600px) / 2 + clamp(20px,5vw,72px))) 80px;display:flex;flex-direction:column;gap:32px">
       <iframe src="{{ c.mapEmbed }}" title="Mapa" loading="lazy" style="border:0;width:100%;height:clamp(300px,36vw,420px);border-radius:28px;box-shadow:var(--shadow-md);display:block"></iframe>
       <div id="b-forma" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));border-radius:28px;overflow:hidden;box-shadow:var(--shadow-md);background:var(--color-bg)">
         <div style="background:var(--color-accent);color:var(--color-bg);padding:clamp(28px,4vw,48px);display:flex;flex-direction:column;gap:22px">
@@ -261,7 +279,7 @@
       <button type="button" onClick="{{ lbClose }}" aria-label="Close" style="position:absolute;right:clamp(8px,2vw,32px);top:clamp(8px,2vw,32px);width:52px;height:52px;border-radius:999px;border:0;cursor:pointer;background:var(--color-bg);display:grid;place-items:center"><i class="ph-duotone ph-x" style="font-size:22px"></i></button>
     </div>
   </sc-if>
-  <footer style="background:var(--color-bg)">
+  <footer style="background:var(--color-accent-100)">
     <div style="max-width:1600px;margin:0 auto;padding:40px clamp(20px,5vw,72px) 20px;display:flex;flex-direction:column;gap:28px">
       <div style="display:flex;flex-wrap:wrap;gap:28px 48px;justify-content:space-between">
         <div style="display:flex;flex-direction:column;gap:10px;font-size:16px">
@@ -344,27 +362,27 @@ class Component extends DCLogic {
       sr: { addr: "Fruškogorska 12, Novi Sad", call: "Pozovite", callLong: "Pozovite ambulantu", heroA: "Zdravlje vaših|ljubimaca", heroB: "je naš|prioritet",
         heroSub: "Dobrodošli u Basnu – mesto gde pažnja, znanje i iskustvo stoje iza svakog pregleda, a vaši ljubimci se osećaju kao kod kuće.",
         servicesTitle: "Usluge", teamTitle: "Naš tim", teamLead: "Veterinari koji vode brigu o svakom pacijentu.", vet: "dr vet. med.", patientsTitle: "Naši pacijenti",
-        nav: ["Usluge", "Cenovnik", "Tim", "Pacijenti", "Blog", "FAQ", "Lokacija", "Kontakt"], contact: "Kontakt", formTitle: "Zakažite pregled", sub: "Veterinarska ambulanta",
+        nav: ["Usluge", "Recenzije", "Cenovnik", "Tim", "Pacijenti", "Blog", "FAQ", "Lokacija", "Kontakt"], contact: "Kontakt", formTitle: "Zakažite pregled", sub: "Veterinarska ambulanta",
         trust: ["Iskustvo i poverenje", "Savremena oprema", "Radimo i nedeljom"], hours: ["Pon–Pet · 09–20", "Subota · 09–12 i 17–19", "Nedelja · 10–12"],
         faq: [["Kako da zakažem pregled?", "Pozovite nas na 066 858 5854, pišite na Viber ili WhatsApp ili popunite kontakt formu ispod."], ["Koje je radno vreme?", "Ponedeljak–petak 09–20h, subota 09–12h i 17–19h, nedelja 10–12h."], ["Šta da radim u hitnom slučaju?", "Pozovite nas odmah na 066 858 5854."], ["Koja je cena pregleda?", "Cene počinju od navedenog iznosa u cenovniku, a tačnu cenu vam kažemo unapred, na poziv."]],
-        fName: "Ime", fNamePh: "Vaše ime", fPhone: "Telefon", fService: "Usluga", fMsg: "Poruka", fMsgPh: "Za koga, kakav problem…", galleryTitle: "Naši pacijenti", galleryLead: "Mali i veliki, mirni i nestašni, svi su nam podjednako dragi.", send: "Pošalji zahtev", callInstead: "Pozovite", other: "Drugo", subject: "Zahtev za termin — Basna" },
+        fName: "Ime", fNamePh: "Vaše ime", fPhone: "Telefon", fService: "Usluga", fMsg: "Poruka", fMsgPh: "Za koga, kakav problem…", galleryTitle: "Naši pacijenti", galleryLead: "Mali i veliki, mirni i nestašni, svi su nam podjednako dragi.", reviewsTitle: "Šta kažu vlasnici", ratingNum: "5,0", ratingOn: "na Google-u", reviews: [["Veterinarska stanica kojoj verujemo. Doktori su ljubazni i profesionalni. Svaka preporuka.", "Kristina V."], ["Najveći znalci svog posla, pre svega divni i ljubazni ljudi. Petar i Srđan uvek nasmejani i posvećeni svakom ljubimcu.", "Vlasnik ljubimca"], ["Sjajna veterinarska ambulanta. Za svaku preporuku.", "Tatjana"]], send: "Pošalji zahtev", callInstead: "Pozovite", other: "Drugo", subject: "Zahtev za termin — Basna" },
       en: { addr: "Fruškogorska 12, Novi Sad", call: "Call", callLong: "Call the clinic", heroA: "The health|of your pets", heroB: "is our|priority",
         heroSub: "Welcome to Basna – a place where care, knowledge and experience stand behind every check-up, and your pets feel at home.",
         servicesTitle: "Services", teamTitle: "Our team", teamLead: "Vets who look after every patient.", vet: "DVM", patientsTitle: "Our patients",
-        nav: ["Services", "Prices", "Team", "Patients", "Blog", "FAQ", "Location", "Contact"], contact: "Contact", formTitle: "Book a check-up", sub: "Veterinary clinic",
+        nav: ["Services", "Reviews", "Prices", "Team", "Patients", "Blog", "FAQ", "Location", "Contact"], contact: "Contact", formTitle: "Book a check-up", sub: "Veterinary clinic",
         trust: ["Experience and trust", "Modern equipment", "Open on Sundays"], hours: ["Mon–Fri · 09–20", "Saturday · 09–12 and 17–19", "Sunday · 10–12"],
         faq: [["How do I book a visit?", "Call us on 066 858 5854, write on Viber or WhatsApp, or fill in the contact form below."], ["What are the opening hours?", "Monday–Friday 09–20, Saturday 09–12 and 17–19, Sunday 10–12."], ["What should I do in an emergency?", "Call us right away on 066 858 5854."], ["What is the price of a check-up?", "Prices start from the amount listed in the price list, and we tell you the exact price in advance when you call."]],
-        fName: "Name", fNamePh: "Your name", fPhone: "Phone", fService: "Service", fMsg: "Message", fMsgPh: "For whom, what problem…", galleryTitle: "Our patients", galleryLead: "Big and small, calm and mischievous, we love them all equally.", send: "Send request", callInstead: "Call", other: "Other", subject: "Appointment request — Basna" },
+        fName: "Name", fNamePh: "Your name", fPhone: "Phone", fService: "Service", fMsg: "Message", fMsgPh: "For whom, what problem…", galleryTitle: "Our patients", galleryLead: "Big and small, calm and mischievous, we love them all equally.", reviewsTitle: "What owners say", ratingNum: "5.0", ratingOn: "on Google", reviews: [["A clinic we trust. The doctors are kind and professional. Highly recommended.", "Kristina V."], ["The greatest experts at their job, and above all wonderful, kind people. Petar and Srđan are always smiling and devoted to every pet.", "Pet owner"], ["A great veterinary clinic. Recommended to everyone.", "Tatjana"]], send: "Send request", callInstead: "Call", other: "Other", subject: "Appointment request — Basna" },
       ru: { addr: "Фрушкогорска 12, Нови-Сад", call: "Позвоните", callLong: "Позвоните в клинику", heroA: "Здоровье ваших|питомцев", heroB: "наш|приоритет",
         heroSub: "Добро пожаловать в Басну – место, где за каждым осмотром стоят внимание, знания и опыт, а ваши питомцы чувствуют себя как дома.",
         servicesTitle: "Услуги", teamTitle: "Наша команда", teamLead: "Ветеринары, которые заботятся о каждом пациенте.", vet: "д-р вет. мед.", patientsTitle: "Наши пациенты",
-        nav: ["Услуги", "Цены", "Команда", "Пациенты", "Блог", "FAQ", "Локация", "Контакт"], contact: "Контакт", formTitle: "Запишитесь на осмотр", sub: "Ветеринарная клиника",
+        nav: ["Услуги", "Отзывы", "Цены", "Команда", "Пациенты", "Блог", "FAQ", "Локация", "Контакт"], contact: "Контакт", formTitle: "Запишитесь на осмотр", sub: "Ветеринарная клиника",
         trust: ["Опыт и доверие", "Современное оборудование", "Работаем и в воскресенье"], hours: ["Пн–Пт · 09–20", "Суббота · 09–12 и 17–19", "Воскресенье · 10–12"],
         faq: [["Как записаться на приём?", "Позвоните по номеру 066 858 5854, напишите в Viber или WhatsApp либо заполните форму ниже."], ["Какой график работы?", "Понедельник–пятница 09–20, суббота 09–12 и 17–19, воскресенье 10–12."], ["Что делать в экстренном случае?", "Немедленно позвоните по номеру 066 858 5854."], ["Какова цена осмотра?", "Цены начинаются с указанной в прайс-листе суммы, точную цену называем заранее по телефону."]],
-        fName: "Имя", fNamePh: "Ваше имя", fPhone: "Телефон", fService: "Услуга", fMsg: "Сообщение", fMsgPh: "Для кого, какая проблема…", galleryTitle: "Наши пациенты", galleryLead: "Большие и маленькие, спокойные и озорные, все они нам одинаково дороги.", send: "Отправить запрос", callInstead: "Позвоните", other: "Другое", subject: "Запрос на приём — Basna" }
+        fName: "Имя", fNamePh: "Ваше имя", fPhone: "Телефон", fService: "Услуга", fMsg: "Сообщение", fMsgPh: "Для кого, какая проблема…", galleryTitle: "Наши пациенты", galleryLead: "Большие и маленькие, спокойные и озорные, все они нам одинаково дороги.", reviewsTitle: "Что говорят владельцы", ratingNum: "5,0", ratingOn: "в Google", reviews: [["Ветеринарная клиника, которой мы доверяем. Врачи любезны и профессиональны. Очень рекомендуем.", "Кристина В."], ["Настоящие знатоки своего дела и, прежде всего, замечательные, добрые люди. Петар и Срджан всегда улыбаются и внимательны к каждому питомцу.", "Владелец питомца"], ["Отличная ветеринарная клиника. Рекомендую всем.", "Татьяна"]], send: "Отправить запрос", callInstead: "Позвоните", other: "Другое", subject: "Запрос на приём — Basna" }
     };
     const t = this.clean(T[L]), vt = this.clean(C.t[L]), fmt = (n) => n.toLocaleString(L === "sr" ? "de-DE" : L === "ru" ? "ru-RU" : "en-US");
-    const ids = ["b-usluge", "b-cenovnik", "b-tim", "b-pacijenti", "b-blog", "b-faq", "b-kontakt", "b-forma"];
+    const ids = ["b-usluge", "b-recenzije", "b-cenovnik", "b-tim", "b-pacijenti", "b-blog", "b-faq", "b-kontakt", "b-forma"];
     const nav = t.nav.map((label, i) => ({ label, onClick: this.scrollTo(ids[i]) }));
     const services = this.clean(C.services.map(s => ({ id: s.id, icon: s.icon, ...s[L] })));
     const F0 = F.service || services[0].name;
@@ -386,19 +404,20 @@ class Component extends DCLogic {
       lbOpen: this.state.lb != null, lbClose: () => this.setState({ lb: null }), lbPrev: (e) => { e.stopPropagation(); this.lb(-1); }, lbNext: (e) => { e.stopPropagation(); this.lb(1); },
       lbStyle: { width: "min(100%,900px)", height: "min(100%,80vh)", backgroundImage: "url(p" + ((this.state.lb ?? 0) + 2) + ".png)", backgroundSize: "contain", backgroundRepeat: "no-repeat", backgroundPosition: "center" },
       sliderRef: this.sliderRef, arrowInset: narrow ? "8px" : "-24px", ...this.sliderVals(Array.from({ length: 13 }, (_, i) => ({ style: { backgroundImage: "url(p" + (i + 2) + ".png)" } }))),
+      reviews: t.reviews.map(r => ({ q: "„" + r[0] + "“", a: r[1] })), toReviews: this.scrollTo("b-recenzije"),
       narrowHome: narrow && !page, callAlign: narrow ? "flex-start" : "center",
       t, c, nav, services, narrow, wide: !narrow, hours: t.hours,
       toTop: this.scrollTo(null), showMenu: narrow && this.state.menu, toggleMenu: () => this.setState(s => ({ menu: !s.menu })),
-      hPos: mob ? "50% 30%" : "50% 40%",
+      hPos: mob ? "50% 25%" : "50% 20%",
       hGlow: { display: "none" },
-      hPhoto: { position: "absolute", top: 0, right: 0, height: mob ? 420 : "100%", width: mob ? "100%" : "64%", WebkitMaskImage: mob ? "linear-gradient(to bottom,#000 70%,transparent 100%)" : "linear-gradient(to right,transparent 0,#000 18%),linear-gradient(to top,transparent 0,#000 14%)", maskImage: mob ? "linear-gradient(to bottom,#000 70%,transparent 100%)" : "linear-gradient(to right,transparent 0,#000 18%),linear-gradient(to top,transparent 0,#000 14%)", WebkitMaskComposite: "source-in", maskComposite: "intersect" },
-      hShade: { position: "absolute", inset: 0, zIndex: 1, pointerEvents: "none", display: mob ? "none" : "block", background: "linear-gradient(90deg,#ffffff 0,#ffffff 26%,rgba(255,255,255,0.5) 38%,transparent 50%)" },
+      hPhoto: { position: "absolute", top: 0, right: 0, height: mob ? 420 : "100%", width: mob ? "100%" : "58%", WebkitMaskImage: mob ? "linear-gradient(to bottom,#000 70%,transparent 100%)" : "linear-gradient(to right,transparent 0,#000 26%),linear-gradient(to top,transparent 0,#000 14%)", maskImage: mob ? "linear-gradient(to bottom,#000 70%,transparent 100%)" : "linear-gradient(to right,transparent 0,#000 26%),linear-gradient(to top,transparent 0,#000 14%)", WebkitMaskComposite: "source-in", maskComposite: "intersect" },
+      hShade: { position: "absolute", inset: 0, zIndex: 1, pointerEvents: "none", display: mob ? "none" : "block", background: "linear-gradient(90deg,#ffffff 0,#ffffff 40%,rgba(255,255,255,0.6) 48%,transparent 58%)" },
       hText: { position: "relative", zIndex: 2, boxSizing: "border-box", width: mob ? "auto" : "46%", minHeight: mob ? "auto" : "max(500px, calc(100svh - 166px))", padding: mob ? "340px clamp(20px,5vw,72px) 48px" : "28px clamp(20px,5vw,72px)", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "flex-start", gap: mob ? "clamp(18px,2.4vw,30px)" : "clamp(12px,2.2vh,26px)" },
       heroAria: (t.heroA + " " + t.heroB).split("|").join(" "),
       wordsA: t.heroA.split("|").map((w, i) => ({ t: w, style: { display: "block", whiteSpace: "nowrap", animation: "b-rise .8s cubic-bezier(.2,.8,.2,1) " + (0.5 + i * 0.18) + "s both" } })),
       wordsB: t.heroB.split("|").map((w, i) => ({ t: w, style: { display: "block", whiteSpace: "nowrap", animation: "b-rise .8s cubic-bezier(.2,.8,.2,1) " + (0.9 + i * 0.18) + "s both" } })),
       trust: t.trust.map((label, i) => ({ label, icon: ["ph-heart", "ph-shield-plus", "ph-clock"][i] })),
-      team: [{ id: "srdjan", name: "Srđan Japuš" }, { id: "petar", name: "Petar Božić" }],
+      team: [{ id: "srdjan", name: "Srđan Japuš", img: "tim-srdjan.png" }, { id: "petar", name: "Petar Božić", img: "tim-petar.png" }],
       gallery: Array.from({ length: 13 }, (_, i) => ({ style: { aspectRatio: "1", borderRadius: "var(--radius-md)", backgroundColor: "var(--color-neutral-200)", backgroundImage: "url(p" + (i + 2) + ".png)", backgroundSize: "cover", backgroundPosition: "center", boxShadow: "var(--shadow-sm)" } })),
       langs: ["sr", "en", "ru"].map(code => ({ label: code.toUpperCase(), onClick: () => { localStorage.setItem("basna-lang", code); this.setState({ lang: code }); },
         style: { font: "inherit", fontSize: 13, fontWeight: 600, letterSpacing: "0.04em", cursor: "pointer", border: 0, borderRadius: 999, padding: "4px 10px", minWidth: 36, background: code === L ? "var(--color-accent-700)" : "transparent", color: code === L ? "var(--color-bg)" : "var(--color-accent-900)" } })),
