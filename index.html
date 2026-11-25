@@ -1,13 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="sr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
 <title>Basna – Veterinarska ambulanta, Novi Sad</title>
 <meta name="description" content="Veterinarska ambulanta Basna, Fruškogorska 12, Novi Sad. Tel. 066 858 5854.">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="preload" as="image" href="hero.webp" fetchpriority="high">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="sr_RS">
+<meta property="og:title" content="Basna – Veterinarska ambulanta, Novi Sad">
+<meta property="og:description" content="Veterinarska ambulanta Basna, Fruškogorska 12, Novi Sad. Tel. 066 858 5854.">
+<meta property="og:image" content="https://basna021.github.io/hero.webp">
+<meta property="og:url" content="https://basna021.github.io/">
 </head>
 <body>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#28cfcf"/><text x="50" y="64" font-size="44" font-family="sans-serif" font-weight="800" text-anchor="middle" fill="#00363b">b</text></svg></template>
 <x-dc>
 <helmet>
 <link rel="stylesheet" href="styles.css">
@@ -16,7 +26,6 @@
 <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
 <script src="ds-bundle.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800;900&display=swap">
-<script src="./image-slot.js"></script>
 <style>@keyframes b-float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-5px) rotate(-6deg)}}@keyframes b-pop{0%{transform:scale(.4);opacity:0}60%{transform:scale(1.15);opacity:1}100%{transform:scale(1)}}:root{--font-body:"Nunito",system-ui,sans-serif;--font-heading:"Nunito",system-ui,sans-serif;--color-bg:#ffffff;--color-text:#00363b;--color-accent:#00808a;--color-accent-100:#e3fafa;--color-accent-200:#c0f2f2;--color-accent-300:#8fe8e8;--color-accent-400:#33c4c8;--color-accent-500:#00808a;--color-accent-600:#006f77;--color-accent-700:#005d64;--color-accent-800:#004b51;--color-accent-900:#00363b;--color-accent-2:#d6006c}body{margin:0;background:#ffffff;color:#00363b;font-family:"Nunito",system-ui,sans-serif}h1,h2,h3{font-family:"Nunito",system-ui,sans-serif}a{color:var(--color-accent-700)}a:hover{color:var(--color-accent-600)}@keyframes vp-ring{0%,12%,100%{transform:rotate(0)}2%,6%{transform:rotate(-10deg)}4%,8%{transform:rotate(10deg)}10%{transform:rotate(0)}}@keyframes b-pop{0%{transform:scale(0);opacity:0}100%{transform:scale(1);opacity:1}}@keyframes b-disc{0%{transform:scale(.15) rotate(-40deg);opacity:0}100%{transform:scale(1) rotate(0);opacity:1}}@keyframes b-rise{0%{transform:translateY(36px);opacity:0}100%{transform:translateY(0);opacity:1}}@keyframes b-paw{0%,100%{opacity:0}15%,55%{opacity:.85}}@keyframes b-glow{0%{opacity:0;transform:scale(.6)}60%{opacity:1}100%{opacity:.85;transform:scale(1)}}@keyframes b-lights{0%{filter:brightness(.15) saturate(.1) blur(8px)}55%{filter:brightness(.7) saturate(.6) blur(2px)}100%{filter:none}}@keyframes b-kb{from{transform:scale(1)}to{transform:scale(1.09)}}@keyframes b-sweep{0%{transform:translateX(-70%);opacity:0}25%{opacity:1}100%{transform:translateX(190%);opacity:0}}@keyframes b-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}@media (prefers-reduced-motion:reduce){[style*="b-float"],[style*="b-lights"],[style*="b-sweep"],[style*="b-pop"],[style*="b-disc"],[style*="b-rise"],[style*="b-paw"]{animation:none!important;opacity:1!important}.vp-ring{animation:none!important}}</style>
 </helmet>
 <div style="min-height:100vh;display:flex;flex-direction:column">
@@ -54,23 +63,41 @@
     <section style="background:#ffffff;position:relative;overflow:hidden">
       <div style="{{ hWrap }}">
         <div style="{{ hGlow }}"></div>
-        <div style="{{ hPhoto }}"><div data-h="par" style="position:absolute;inset:0;will-change:transform"><div style="position:absolute;inset:0"><div style="position:absolute;inset:0;background:url(hero.png) {{ hPos }}/cover;animation:b-kb 18s ease-in-out infinite alternate"></div></div></div></div>
+        <div style="{{ hPhoto }}"><div data-h="par" style="position:absolute;inset:0;will-change:transform"><div style="position:absolute;inset:0"><div style="position:absolute;inset:0;background:url(hero.webp) {{ hPos }}/cover;animation:b-kb 18s ease-in-out infinite alternate"></div></div></div></div>
         
         
         <div style="{{ hShade }}"></div>
         <div style="{{ hText }}">
-          <span style="order:1;white-space:nowrap;font-size:min(14px,3.3vw);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#006b73;line-height:1.5;animation:b-rise .8s cubic-bezier(.2,.8,.2,1) .2s both">{{ t.sub }} · Novi Sad</span>
+          <span style="order:1;white-space:nowrap;font-size:min(14px,3.3vw);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#006b73;line-height:1.5;animation:b-rise .8s cubic-bezier(.2,.8,.2,1) .2s both">{{ t.sub }} · {{ t.city }}</span>
           <h1 aria-label="{{ heroAria }}" style="order:1;margin:0;font-size:{{ h1Size }};line-height:{{ h1LH }};letter-spacing:-0.025em;font-weight:800;text-transform:uppercase;color:#00363b">
             <sc-for list="{{ wordsA }}" as="w" hint-placeholder-count="3"><span style="{{ w.style }}">{{ w.t }}</span></sc-for><em style="font-weight:800;font-style:normal;color:#00808a"><sc-for list="{{ wordsB }}" as="w" hint-placeholder-count="2"><span style="{{ w.style }}">{{ w.t }}</span></sc-for></em>
           </h1>
           <p style="order:3;margin:0;font-size:clamp(15px,min(1.6vw,2.3vh),20px);line-height:1.45;max-width:44ch;color:#00363b;animation:b-rise .8s cubic-bezier(.2,.8,.2,1) 1.3s both">{{ t.heroSub }}</p>
+          <div style="order:3;display:flex;flex-wrap:wrap;gap:12px;width:100%;max-width:520px;animation:b-rise .8s cubic-bezier(.2,.8,.2,1) 1.4s both">
+            <a class="btn btn-primary" href="{{ c.tel }}" style="{{ ctaPrimary }}"><i class="ph-duotone ph-phone-call" style="font-size:22px"></i>{{ t.callNum }}</a>
+            <a class="btn btn-secondary" href="#" onClick="{{ toForm }}" style="{{ ctaSecondary }}">{{ t.formTitle }}</a>
+          </div>
+          <span style="order:3;display:flex;align-items:center;gap:10px;font-size:16px;line-height:1.35;color:#00363b"><span style="{{ statusDot }}"></span>{{ status }}</span>
+          <a href="{{ c.tel }}" style="order:3;display:flex;align-items:center;gap:8px;font-size:16px;font-weight:600;line-height:1.35;color:var(--color-accent-2);text-decoration:none"><i class="ph-duotone ph-warning-circle" style="font-size:22px;flex:none"></i>{{ t.emerg }}</a>
+          <sc-if value="{{ notMob }}" hint-placeholder-val="{{ true }}">
           <div style="order:3;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;width:100%;max-width:520px;animation:b-rise .8s cubic-bezier(.2,.8,.2,1) 1.5s both">
             <sc-for list="{{ trust }}" as="tr" hint-placeholder-count="3">
-              <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;padding:10px 6px 9px;border-radius:20px;background:#ffffff;border:1px solid var(--color-accent-200);box-shadow:var(--shadow-sm)"><span style="width:44px;height:44px;border-radius:50%;background:var(--color-accent-100);box-shadow:inset 0 0 0 1px var(--color-accent-200);display:grid;place-items:center"><i class="ph-duotone {{ tr.icon }}" style="font-size:24px;color:var(--color-accent-700)"></i></span><span style="font-size:13px;line-height:1.25;color:var(--color-accent-900)">{{ tr.label }}</span></div>
+              <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;padding:10px 6px 9px;border-radius:20px;background:#ffffff;border:1px solid var(--color-accent-200);box-shadow:var(--shadow-sm)"><span style="width:44px;height:44px;border-radius:50%;background:var(--color-accent-100);box-shadow:inset 0 0 0 1px var(--color-accent-200);display:grid;place-items:center"><i class="ph-duotone {{ tr.icon }}" style="font-size:24px;color:var(--color-accent-700)"></i></span><span style="font-size:13px;line-height:1.25;color:var(--color-accent-900)">{{ tr.label }}</span><sc-if value="{{ tr.sub }}" hint-placeholder-val="{{ false }}"><span style="font-size:13px;font-weight:700;line-height:1.2;color:var(--color-accent-700)">{{ tr.sub }}</span></sc-if></div>
             </sc-for>
           </div>
-          <a href="#" onClick="{{ toReviews }}" style="order:3;display:flex;align-items:center;gap:16px;padding:14px 24px;border-radius:999px;background:#ffffff;border:1px solid var(--color-accent-200);box-shadow:var(--shadow-sm);text-decoration:none;color:var(--color-text);animation:b-rise .8s cubic-bezier(.2,.8,.2,1) 1.5s both"><span style="font-size:40px;font-weight:800;line-height:1;color:var(--color-accent-900)">{{ t.ratingNum }}</span><span style="display:flex;flex-direction:column;gap:3px"><span style="display:flex;gap:2px"><i class="ph-fill ph-star" style="font-size:22px;color:#f5b301"></i><i class="ph-fill ph-star" style="font-size:22px;color:#f5b301"></i><i class="ph-fill ph-star" style="font-size:22px;color:#f5b301"></i><i class="ph-fill ph-star" style="font-size:22px;color:#f5b301"></i><i class="ph-fill ph-star" style="font-size:22px;color:#f5b301"></i></span><span style="font-size:15px;color:var(--color-neutral-800)">{{ t.ratingOn }}</span></span></a>
+          <a href="{{ c.gUrl }}" target="_blank" rel="noopener" style="order:3;display:flex;align-items:center;gap:16px;padding:14px 24px;border-radius:999px;background:#ffffff;border:1px solid var(--color-accent-200);box-shadow:var(--shadow-sm);text-decoration:none;color:var(--color-text);animation:b-rise .8s cubic-bezier(.2,.8,.2,1) 1.5s both"><span style="font-size:40px;font-weight:800;line-height:1;color:var(--color-accent-900)">{{ t.ratingNum }}</span><span style="display:flex;flex-direction:column;gap:3px"><span style="display:flex;gap:2px"><i class="ph-fill ph-star" style="font-size:22px;color:#f5b301"></i><i class="ph-fill ph-star" style="font-size:22px;color:#f5b301"></i><i class="ph-fill ph-star" style="font-size:22px;color:#f5b301"></i><i class="ph-fill ph-star" style="font-size:22px;color:#f5b301"></i><i class="ph-fill ph-star" style="font-size:22px;color:#f5b301"></i></span><span style="font-size:15px;color:var(--color-neutral-800)">{{ t.ratingOn }}</span></span></a>
+          </sc-if>
         </div>
+        <sc-if value="{{ mob }}" hint-placeholder-val="{{ false }}">
+        <div style="order:3;display:flex;flex-direction:column;gap:14px;padding:8px clamp(20px,5vw,72px) 16px">
+          <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;width:100%">
+            <sc-for list="{{ trust }}" as="tr" hint-placeholder-count="3">
+              <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px;padding:8px 4px;border-radius:16px;background:#ffffff;border:1px solid var(--color-accent-200);box-shadow:var(--shadow-sm)"><i class="ph-duotone {{ tr.icon }}" style="font-size:20px;color:var(--color-accent-700)"></i><span style="font-size:11.5px;line-height:1.25;color:var(--color-accent-900)">{{ tr.label }}</span><sc-if value="{{ tr.sub }}" hint-placeholder-val="{{ false }}"><span style="font-size:11.5px;font-weight:700;line-height:1.2;color:var(--color-accent-700)">{{ tr.sub }}</span></sc-if></div>
+            </sc-for>
+          </div>
+          <a href="{{ c.gUrl }}" target="_blank" rel="noopener" style="order:3;display:flex;align-items:center;gap:16px;padding:14px 24px;border-radius:999px;background:#ffffff;border:1px solid var(--color-accent-200);box-shadow:var(--shadow-sm);text-decoration:none;color:var(--color-text);animation:b-rise .8s cubic-bezier(.2,.8,.2,1) 1.5s both"><span style="font-size:40px;font-weight:800;line-height:1;color:var(--color-accent-900)">{{ t.ratingNum }}</span><span style="display:flex;flex-direction:column;gap:3px"><span style="display:flex;gap:2px"><i class="ph-fill ph-star" style="font-size:22px;color:#f5b301"></i><i class="ph-fill ph-star" style="font-size:22px;color:#f5b301"></i><i class="ph-fill ph-star" style="font-size:22px;color:#f5b301"></i><i class="ph-fill ph-star" style="font-size:22px;color:#f5b301"></i><i class="ph-fill ph-star" style="font-size:22px;color:#f5b301"></i></span><span style="font-size:15px;color:var(--color-neutral-800)">{{ t.ratingOn }}</span></span></a>
+        </div>
+        </sc-if>
       </div>
     </section>
 
@@ -94,7 +121,7 @@
     <section id="b-recenzije" style="background:var(--color-bg);border-radius:50% 50% 0 0 / 56px 56px 0 0;margin-top:-40px;position:relative;padding:72px max(clamp(20px,5vw,72px), calc((100% - 1600px) / 2 + clamp(20px,5vw,72px))) 80px;display:flex;flex-direction:column;gap:{{ revGap }}">
       <div style="display:flex;flex-wrap:wrap;gap:20px 48px;align-items:center;justify-content:space-between;margin-bottom:{{ revGap }}">
         <h2 style="margin:0;font-size:clamp(34px,4vw,44px)">{{ t.reviewsTitle }}</h2>
-        <div style="display:flex;align-items:center;gap:14px;padding:12px 22px;border-radius:999px;background:var(--color-accent-100)"><span style="font-size:32px;font-weight:800;line-height:1;color:var(--color-accent-900)">{{ t.ratingNum }}</span><span style="display:flex;flex-direction:column;gap:2px"><span style="display:flex;gap:2px"><i class="ph-fill ph-star" style="font-size:22px;color:#f5b301"></i><i class="ph-fill ph-star" style="font-size:22px;color:#f5b301"></i><i class="ph-fill ph-star" style="font-size:22px;color:#f5b301"></i><i class="ph-fill ph-star" style="font-size:22px;color:#f5b301"></i><i class="ph-fill ph-star" style="font-size:22px;color:#f5b301"></i></span><span style="font-size:14px;color:var(--color-neutral-800)">{{ t.ratingOn }}</span></span></div>
+        <a href="{{ c.gUrl }}" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:14px;padding:12px 22px;border-radius:999px;background:var(--color-accent-100);text-decoration:none;color:var(--color-text)"><span style="font-size:32px;font-weight:800;line-height:1;color:var(--color-accent-900)">{{ t.ratingNum }}</span><span style="display:flex;flex-direction:column;gap:2px"><span style="display:flex;gap:2px"><i class="ph-fill ph-star" style="font-size:22px;color:#f5b301"></i><i class="ph-fill ph-star" style="font-size:22px;color:#f5b301"></i><i class="ph-fill ph-star" style="font-size:22px;color:#f5b301"></i><i class="ph-fill ph-star" style="font-size:22px;color:#f5b301"></i><i class="ph-fill ph-star" style="font-size:22px;color:#f5b301"></i></span><span style="font-size:14px;color:var(--color-neutral-800)">{{ t.ratingOn }}</span></span></a>
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px">
         <sc-for list="{{ reviews }}" as="r" hint-placeholder-count="3">
@@ -124,10 +151,10 @@
 
     <section id="b-tim" style="background:var(--color-bg);border-radius:50% 50% 0 0 / 56px 56px 0 0;margin-top:-40px;position:relative;padding:72px max(clamp(20px,5vw,72px), calc((100% - 1600px) / 2 + clamp(20px,5vw,72px))) 80px;display:flex;flex-direction:column;gap:32px">
       <div style="display:flex;flex-direction:column;gap:12px;max-width:640px"><h2 style="margin:0;font-size:clamp(34px,4vw,44px)">{{ t.teamTitle }}</h2><p style="margin:0;font-size:18px;line-height:1.6;color:var(--color-neutral-800)">{{ t.teamLead }}</p></div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),280px));gap:32px 32px">
+      <div style="{{ teamGrid }}">
         <sc-for list="{{ team }}" as="m" hint-placeholder-count="2">
           <figure style="margin:0;display:flex;flex-direction:column;gap:12px">
-            <div style="overflow:hidden;border-radius:var(--radius-md);box-shadow:var(--shadow-sm);background:var(--color-bg)"><div style="aspect-ratio:4/5"><image-slot id="basna-tim-{{ m.id }}" shape="rect" fit="cover" src="{{ m.img }}" placeholder="Prevucite portret"></image-slot></div></div>
+            <div style="overflow:hidden;border-radius:var(--radius-md);box-shadow:var(--shadow-sm);background:var(--color-bg)"><div role="img" aria-label="{{ m.name }}" data-bg="{{ m.img }}" style="aspect-ratio:4/5;background-size:cover;background-position:center top;background-color:var(--color-neutral-200)"></div></div>
             <figcaption style="display:flex;flex-direction:column;gap:4px"><span style="font-size:28px;font-weight:900;line-height:1.2;letter-spacing:-0.01em;color:var(--color-accent-700)">{{ m.name }}</span><span style="font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700)">{{ t.vet }}</span></figcaption>
           </figure>
         </sc-for>
@@ -138,7 +165,7 @@
       <h2 style="margin:0 0 {{ priceGap }} 0;font-size:clamp(34px,4vw,44px)">{{ vt.homePatientsTitle }}</h2>
       <div style="position:relative">
         <div ref="{{ sliderRef }}" onPointerDown="{{ dragDown }}" onPointerUp="{{ dragUp }}" style="overflow:hidden;border-radius:var(--radius-md);touch-action:pan-y;cursor:grab">
-          <div style="{{ trackStyle }}"><sc-for list="{{ slides }}" as="g" hint-placeholder-count="4"><div role="img" aria-label="{{ t.patientsTitle }}" style="{{ g.style }}"></div></sc-for></div>
+          <div style="{{ trackStyle }}"><sc-for list="{{ slides }}" as="g" hint-placeholder-count="4"><div role="img" aria-label="{{ t.patientsTitle }}" data-bg="{{ g.bg }}" style="{{ g.style }}"></div></sc-for></div>
         </div>
         <button type="button" class="btn btn-secondary btn-icon" onClick="{{ slidePrev }}" aria-label="Prev" style="position:absolute;left:{{ arrowInset }};top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:999px;background:var(--color-bg);box-shadow:var(--shadow-md)"><i class="ph-duotone ph-caret-left" style="font-size:22px"></i></button>
         <button type="button" class="btn btn-secondary btn-icon" onClick="{{ slideNext }}" aria-label="Next" style="position:absolute;right:{{ arrowInset }};top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:999px;background:var(--color-bg);box-shadow:var(--shadow-md)"><i class="ph-duotone ph-caret-right" style="font-size:22px"></i></button>
@@ -151,8 +178,8 @@
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:40px">
         <sc-for list="{{ articles }}" as="a" hint-placeholder-count="3">
           <a href="{{ a.href }}" onClick="{{ a.open }}" style="display:flex;flex-direction:column;gap:14px;height:100%;text-decoration:none;color:var(--color-text)">
-            <span style="display:block;overflow:hidden;border-radius:var(--radius-md);box-shadow:var(--shadow-sm)"><span style="{{ a.imgStyle }}"></span></span>
-            <span style="font-size:24px;font-weight:600;line-height:1.25;min-height:2.5em">{{ a.title }}</span>
+            <span style="display:block;overflow:hidden;border-radius:var(--radius-md);box-shadow:var(--shadow-sm)"><span data-bg="{{ a.bg }}" style="{{ a.imgStyle }}"></span></span>
+            <span style="font-size:24px;font-weight:600;line-height:1.25;min-height:{{ blogTitleMin }}">{{ a.title }}</span>
             <span style="flex:1;font-size:17px;line-height:1.55;color:var(--color-neutral-800)">{{ a.lead }}</span>
             <span class="btn btn-primary" style="align-self:flex-start;color:var(--color-bg);font-size:15px;padding:10px 20px;border-radius:999px;white-space:nowrap">{{ vt.read }}</span>
           </a>
@@ -192,12 +219,13 @@
         </div>
         <form onSubmit="{{ submitForm }}" style="padding:clamp(28px,4vw,48px);display:flex;flex-direction:column;gap:18px">
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr));gap:16px">
-            <label style="display:flex;flex-direction:column;gap:6px;font-size:14px;color:var(--color-neutral-700)">{{ t.fName }}<input class="input" required value="{{ fName }}" onChange="{{ onName }}" placeholder="{{ t.fNamePh }}"></label>
-            <label style="display:flex;flex-direction:column;gap:6px;font-size:14px;color:var(--color-neutral-700)">{{ t.fPhone }}<input class="input" required value="{{ fPhone }}" onChange="{{ onPhone }}" placeholder="06x xxx xxxx"></label>
+            <label style="display:flex;flex-direction:column;gap:6px;font-size:14px;color:var(--color-neutral-700)">{{ t.fName }}<input class="input" name="name" autocomplete="name" required value="{{ fName }}" onChange="{{ onName }}" onInvalid="{{ invName }}" onInput="{{ clrVal }}" placeholder="{{ t.fNamePh }}"></label>
+            <label style="display:flex;flex-direction:column;gap:6px;font-size:14px;color:var(--color-neutral-700)">{{ t.fPhone }}<input class="input" type="tel" inputmode="tel" name="phone" autocomplete="tel" required value="{{ fPhone }}" onChange="{{ onPhone }}" onInvalid="{{ invPhone }}" onInput="{{ clrVal }}" placeholder="06x xxx xxxx"></label>
           </div>
           <label style="display:flex;flex-direction:column;gap:6px;font-size:14px;color:var(--color-neutral-700)">{{ t.fService }}<select class="input" value="{{ fService }}" onChange="{{ onService }}"><sc-for list="{{ serviceNames }}" as="o" hint-placeholder-count="7"><option value="{{ o }}">{{ o }}</option></sc-for></select></label>
           <label style="display:flex;flex-direction:column;gap:6px;font-size:14px;color:var(--color-neutral-700)">{{ t.fMsg }}<textarea class="input" rows="3" value="{{ fMsg }}" onChange="{{ onMsg }}" placeholder="{{ t.fMsgPh }}" style="resize:vertical;min-height:84px"></textarea></label>
-          <button type="submit" class="btn btn-primary btn-block" style="color:var(--color-bg);font-size:17px;padding:15px;border-radius:999px">{{ t.send }}</button>
+          <button type="submit" class="btn btn-primary btn-block" disabled="{{ sending }}" style="color:var(--color-bg);font-size:17px;padding:15px;border-radius:999px">{{ t.send }}</button>
+          <sc-if value="{{ formMsg }}" hint-placeholder-val="{{ false }}"><p role="status" style="margin:0;text-align:center;font-size:16px;font-weight:600;line-height:1.4;color:{{ formMsgColor }}">{{ formMsg }}</p></sc-if>
           <a href="{{ c.tel }}" style="align-self:center;display:flex;gap:8px;align-items:center;font-size:16px;text-decoration:none;color:var(--color-accent-700)"><i class="ph-duotone ph-phone-call" style="font-size:18px;transform-origin:50% 72%;animation:vp-ring 2.6s ease-in-out infinite"></i>{{ t.callUs }}</a>
         </form>
       </div>
@@ -262,7 +290,7 @@
       </section>
       <section style="max-width:1600px;margin:0 auto;padding:0 clamp(20px,5vw,72px) 24px">
         <div style="{{ collageStyle }}">
-          <sc-for list="{{ collage }}" as="g" hint-placeholder-count="12"><button type="button" data-rv="1" data-i="{{ g.i }}" aria-label="{{ t.patientsTitle }}" onClick="{{ g.open }}" style="{{ g.style }}" style-hover="filter:brightness(1.06)"></button></sc-for>
+          <sc-for list="{{ collage }}" as="g" hint-placeholder-count="12"><button type="button" data-rv="1" data-i="{{ g.i }}" aria-label="{{ t.patientsTitle }}" onClick="{{ g.open }}" data-bg="{{ g.bg }}" style="{{ g.style }}" style-hover="filter:brightness(1.06)"></button></sc-for>
         </div>
       </section>
       <section style="padding:8px clamp(16px,5vw,72px) 64px">
@@ -295,23 +323,7 @@
   </sc-if>
   <footer style="{{ footerStyle }}">
     <div style="max-width:1600px;margin:0 auto;padding:40px clamp(20px,5vw,72px) 20px;display:flex;flex-direction:column;gap:28px">
-      <div style="display:flex;flex-wrap:wrap;gap:28px 48px;justify-content:space-between">
-        <div style="display:flex;flex-direction:column;gap:10px;font-size:16px">
-          <span style="font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-neutral-700)">{{ vt.hours }}</span>
-          <div style="display:flex;gap:10px;align-items:flex-start"><i class="ph-duotone ph-clock" style="font-size:20px;color:var(--color-accent);margin-top:2px"></i><div style="display:grid;grid-template-columns:max-content 1fr;gap:2px 14px;line-height:1.45">
-          <sc-for list="{{ hours }}" as="h" hint-placeholder-count="3"><span style="display:contents"><span>{{ h.d }}</span><span>{{ h.t }}</span></span></sc-for></div></div>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:10px;font-size:16px">
-          <span style="font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-neutral-700)">{{ t.contact }}</span>
-          <a href="{{ c.tel }}" style="display:flex;gap:10px;align-items:center;color:var(--color-text);text-decoration:none;font-weight:600;white-space:nowrap"><i class="ph-duotone ph-phone" style="font-size:20px;color:var(--color-accent)"></i><span>{{ c.phone }}</span></a>
-          <a href="{{ c.mailto }}" style="display:flex;gap:10px;align-items:center;color:var(--color-text);text-decoration:none;white-space:nowrap"><i class="ph-duotone ph-envelope-simple" style="font-size:20px;color:var(--color-accent)"></i><span>{{ c.email }}</span></a>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:10px;font-size:16px">
-          <span style="font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-neutral-700)">{{ vt.address }}</span>
-          <a href="{{ c.maps }}" target="_blank" style="display:flex;gap:10px;align-items:flex-start;color:var(--color-text);text-decoration:none;line-height:1.45"><i class="ph-duotone ph-map-pin" style="font-size:20px;color:var(--color-accent)"></i><span>{{ t.addr }}</span></a>
-        </div>
-      </div>
-      <div style="display:flex;flex-wrap:wrap;gap:16px 24px;align-items:center;justify-content:space-between;border-top:1px solid var(--color-divider);padding-top:20px">
+      <div style="display:flex;flex-wrap:wrap;gap:16px 24px;align-items:center;justify-content:space-between">
         <div style="display:flex;flex-wrap:wrap;gap:16px 20px;align-items:center">
           <span style="display:flex;align-items:center;gap:12px"><img src="logo.png" alt="Basna" style="width:52px;height:52px;border-radius:50%;display:block"><span style="font-size:28px;line-height:1">basna</span></span>
           <a href="{{ c.igUrl }}" target="_blank" aria-label="Instagram" style="width:44px;height:44px;border-radius:999px;background:var(--color-accent-100);display:grid;place-items:center;color:var(--color-accent-700);text-decoration:none" style-hover="background:var(--color-accent-200)"><i class="ph-duotone ph-instagram-logo" style="font-size:22px"></i></a>
@@ -321,11 +333,12 @@
       </div>
     </div>
   </footer>
+  <sc-if value="{{ mob }}" hint-placeholder-val="{{ false }}"><div style="{{ barStyle }}"><a class="btn btn-primary btn-block" href="{{ c.tel }}" style="color:var(--color-bg);font-size:18px;padding:14px;border-radius:999px;gap:10px"><i class="ph-duotone ph-phone-call" style="font-size:22px"></i>{{ t.callNum }}</a></div></sc-if>
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { route: (location.hash || "#/").slice(2), lang: localStorage.getItem("basna-lang") || "sr", w: window.innerWidth, menu: false, art: null, faqOpen: null, ready: !!(window.VET_CONTENT && window.VET_CONTENT.t.ru), form: { name: "", phone: "", service: "", msg: "" } };
+  state = { route: (location.hash || "#/").slice(2), lang: localStorage.getItem("basna-lang") || "sr", w: window.innerWidth, menu: false, art: null, faqOpen: null, bar: false, sending: false, formStatus: null, ready: !!(window.VET_CONTENT && window.VET_CONTENT.t.ru), form: { name: "", phone: "", service: "", msg: "" } };
   heroWrap = React.createRef();
   clean = (o) => typeof o === "string" ? o.replace(/\s[–—]\s/g, ", ").replace(/([^\s])[–—]([^\s])/g, "$1-$2") : Array.isArray(o) ? o.map(this.clean) : (o && Object.getPrototypeOf(o) === Object.prototype) ? Object.fromEntries(Object.entries(o).map(([k, v]) => [k, this.clean(v)])) : o;
   sliderRef = React.createRef();
@@ -337,18 +350,30 @@ class Component extends DCLogic {
     this.maxIdx = maxIdx;
     return {
       trackStyle: { display: "flex", gap, transform: "translateX(" + (-idx * (cw + gap)) + "px)", transition: "transform 700ms cubic-bezier(.4,0,.2,1)" },
-      slides: gal.map(g => ({ style: { flex: "none", width: cw, aspectRatio: "1", borderRadius: "var(--radius-md)", backgroundColor: "var(--color-neutral-200)", backgroundImage: g.style.backgroundImage, backgroundSize: "cover", backgroundPosition: "center" } })),
+      slides: gal.map(g => ({ bg: g.bg, style: { flex: "none", width: cw, aspectRatio: "1", borderRadius: "var(--radius-md)", backgroundColor: "var(--color-neutral-200)", backgroundSize: "cover", backgroundPosition: "center" } })),
       slidePrev: () => this.step(-1), slideNext: () => this.step(1),
       dragDown: (e) => { this.dx = e.clientX; }, dragUp: (e) => { const d = e.clientX - (this.dx ?? e.clientX); if (Math.abs(d) > 40) this.step(d < 0 ? 1 : -1); this.dx = null; }
     };
   }
   updateHero = () => {
+    const hs = document.querySelector("main section"), past = window.scrollY > (hs ? hs.offsetHeight : 400); if (past !== this.state.bar) this.setState({ bar: past });
     const par = document.querySelector("[data-h=par]"); if (!par) return;
     par.style.transform = "translateY(" + Math.min(window.scrollY * 0.18, 140) + "px)";
   };
+  hoursStatus(L) {
+    const n = new Date(new Date().toLocaleString("en-US", { timeZone: "Europe/Belgrade" })), d = n.getDay(), m = n.getHours() + n.getMinutes() / 60;
+    const S = [[[10, 12]], [[9, 20]], [[9, 20]], [[9, 20]], [[9, 20]], [[9, 20]], [[9, 12], [17, 19]]];
+    const W = { sr: { open: "Danas otvoreno ", and: " i ", rs: "h", hs: "h", cl: "Sada zatvoreno, otvaramo ", at: "u ", tom: "sutra u ", days: ["u nedelju", "u ponedeljak", "u utorak", "u sredu", "u četvrtak", "u petak", "u subotu"] },
+      en: { open: "Open today ", and: " and ", rs: "h", hs: "h", cl: "Closed now, opening ", at: "at ", tom: "tomorrow at ", days: ["on Sunday", "on Monday", "on Tuesday", "on Wednesday", "on Thursday", "on Friday", "on Saturday"] },
+      ru: { open: "Сегодня открыто ", and: " и ", rs: "", hs: " ч", cl: "Сейчас закрыто, откроемся ", at: "в ", tom: "завтра в ", days: ["в воскресенье", "в понедельник", "во вторник", "в среду", "в четверг", "в пятницу", "в субботу"] } }[L];
+    const slots = S[d], isOpen = slots.some(s => m >= s[0] && m < s[1]);
+    if (isOpen) return { open: true, text: W.open + slots.map(s => s[0] + "–" + s[1]).join(W.and) + W.rs };
+    for (let k = 0; k < 8; k++) { const sl = S[(d + k) % 7].filter(s => k > 0 || s[0] > m); if (sl.length) { const hr = sl[0][0] + W.hs; return { open: false, text: W.cl + (k === 0 ? W.at + hr : k === 1 ? W.tom + hr : W.days[(d + k) % 7] + " " + W.at + hr) }; } }
+    return { open: false, text: "" };
+  }
   go(r) { return (e) => { if (e) e.preventDefault(); location.hash = "#/" + r; }; }
   componentDidMount() {
-    this.setState({ w: window.innerWidth });
+    this.setState({ w: window.innerWidth }); document.documentElement.lang = this.state.lang; this.tick = setInterval(() => this.setState({ now: Date.now() }), 60000);
     this.onHash = () => { const route = (location.hash || "#/").slice(2); this.setState({ route, menu: false }, () => { const [p, sub] = route.split("/"); const el = p === "usluge" && sub && document.getElementById("usluga-" + sub); if (el) setTimeout(() => window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 16, behavior: "smooth" }), 60); else if (route) window.scrollTo(0, 0); }); };
     addEventListener("hashchange", this.onHash);
     this.lastStep = Date.now(); this.auto = setInterval(() => { if (Date.now() - this.lastStep >= 7500) this.step(1); }, 500);
@@ -367,6 +392,9 @@ class Component extends DCLogic {
   }
   componentDidUpdate() {
     this.applyRoute();
+    if (document.documentElement.lang !== this.state.lang) document.documentElement.lang = this.state.lang;
+    if (!this.lz) this.lz = new IntersectionObserver((es) => es.forEach((en) => { if (en.isIntersecting) { const el = en.target; if (el.dataset.bg) el.style.backgroundImage = "url(" + el.dataset.bg + ")"; this.lz.unobserve(el); } }), { rootMargin: "300px" });
+    document.querySelectorAll("[data-bg]:not([data-lz])").forEach((el) => { el.setAttribute("data-lz", "1"); this.lz.observe(el); });
     if (!this.rv) this.rv = new IntersectionObserver((es) => es.forEach((en) => { if (en.isIntersecting) { const el = en.target; el.style.transitionDelay = (Number(el.dataset.i) % 4) * 140 + "ms"; el.style.opacity = 1; el.style.transform = "none"; this.rv.unobserve(el); } }), { threshold: 0.15 });
     document.querySelectorAll("[data-rv]:not([data-ro])").forEach((el) => { el.setAttribute("data-ro", "1"); this.rv.observe(el); });
     if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -381,7 +409,7 @@ class Component extends DCLogic {
       this.rv2.observe(el);
     });
   }
-  componentWillUnmount() { clearInterval(this.auto); this.ro && this.ro.disconnect(); removeEventListener("hashchange", this.onHash); removeEventListener("scroll", this.updateHero); removeEventListener("resize", this.onResize); }
+  componentWillUnmount() { clearInterval(this.auto); clearInterval(this.tick); this.ro && this.ro.disconnect(); removeEventListener("hashchange", this.onHash); removeEventListener("scroll", this.updateHero); removeEventListener("resize", this.onResize); }
   scrollTo(id) { return (e) => { if (e) e.preventDefault(); const run = () => this.setState({ menu: false }, () => setTimeout(() => { const el = id && document.getElementById(id); window.scrollTo({ top: el ? el.getBoundingClientRect().top + window.scrollY - 80 : 0, behavior: "smooth" }); }, 30)); if (this.state.route) { location.hash = "#/"; setTimeout(run, 120); } else run(); }; }
   renderVals() {
     const C = window.VET_CONTENT;
@@ -389,47 +417,52 @@ class Component extends DCLogic {
     const [page, sub] = this.state.route.split("/"); const L = this.state.lang, F = this.state.form, narrow = this.state.w < 980, mob = this.state.w < 700;
     const c = { phone: "066 858 5854", tel: "tel:+381668585854", viber: "viber://chat?number=%2B381668585854", whatsapp: "https://wa.me/381668585854",
       email: "srdjan.japus@gmail.com", mailto: "mailto:srdjan.japus@gmail.com", igUrl: "https://www.instagram.com/basna021/",
+      gUrl: "https://www.google.com/maps/search/?api=1&query=Basna+veterinarska+ambulanta+Fruskogorska+12+Novi+Sad",
       maps: "https://www.google.com/maps/search/?api=1&query=Basna+veterinarska+ambulanta+Fruskogorska+12+Novi+Sad",
       mapEmbed: "https://maps.google.com/maps?q=Fru%C5%A1kogorska%2012%2C%20Novi%20Sad&z=16&output=embed" };
+    const GOOGLE_PROFILE_URL = "https://www.google.com/maps/search/?api=1&query=Basna+veterinarska+ambulanta+Fruskogorska+12+Novi+Sad"; // zameni linkom na Google profil
+    const GR = "X"; // broj Google recenzija
+    const REV2_NAME = ""; // ime autora druge recenzije (sa Google-a); dok je prazno, recenzija se ne prikazuje
+    const FORMSPREE = "https://hook.eu1.make.com/lpq1cgt4ei54bgxivonqplnfvtp8gd17"; // Make webhook -> Google Sheet
     const T = {
-      sr: { addr: "Fruškogorska 12, Novi Sad", call: "Pozovite", callLong: "Pozovite ambulantu", heroA: "Zdravlje vaših|ljubimaca", heroB: "je naš|prioritet",
-        heroSub: "Dobrodošli u Basnu – mesto gde pažnja, znanje i iskustvo stoje iza svakog pregleda, a vaši ljubimci se osećaju kao kod kuće.",
+      sr: { city: "Novi Sad", callNum: "Pozovite 066 858 5854", emerg: "Hitan slučaj? Pozovite odmah 066 858 5854", errName: "Unesite Vaše ime.", errPhone: "Unesite broj telefona.", okMsg: "Hvala! Javićemo Vam se danas.", errSend: "Slanje nije uspelo. Pozovite nas na 066 858 5854.", addr: "Fruškogorska 12, Novi Sad", call: "Pozovite", callLong: "Pozovite ambulantu", heroA: "Veterinarska|ambulanta", heroB: "u Novom Sadu",
+        heroSub: "Fruškogorska 12 · Radimo i nedeljom",
         servicesTitle: "Usluge", teamTitle: "Naš tim", teamLead: "Petar i Srđan, veterinari ambulante Basna u Novom Sadu.", vet: "dr vet. med.", patientsTitle: "Naši pacijenti",
         nav: ["Usluge", "Recenzije", "Cenovnik", "Tim", "Pacijenti", "Blog", "FAQ", "Lokacija", "Kontakt"], contact: "Kontakt", formTitle: "Zakažite pregled", sub: "Veterinarska ambulanta",
-        trust: ["Iskustvo i poverenje", "Savremena oprema", "Radimo i nedeljom"], hours: ["Pon–Pet · 09–20", "Subota · 09–12 i 17–19", "Nedelja · 10–12"],
-        faq: [["Kako da zakažem pregled?", "Pozovite nas na 066 858 5854, pišite na Viber ili WhatsApp ili popunite kontakt formu ispod."], ["Koje je radno vreme?", "Ponedeljak–petak 09–20h, subota 09–12h i 17–19h, nedelja 10–12h."], ["Šta da radim u hitnom slučaju?", "Pozovite nas odmah na 066 858 5854."], ["Koja je cena pregleda?", "Cene počinju od navedenog iznosa u cenovniku, a tačnu cenu vam kažemo unapred, na poziv."]],
-        fName: "Ime", fNamePh: "Vaše ime", fPhone: "Telefon", fService: "Usluga", fMsg: "Poruka", fMsgPh: "Za koga, kakav problem…", galleryTitle: "Naši pacijenti", galleryLead: "Mali i veliki, mirni i nestašni, svi su nam podjednako dragi.", reviewsTitle: "Šta kažu vlasnici", ratingNum: "5,0", ratingOn: "na Google-u", reviews: [["Veterinarska stanica kojoj verujemo. Doktori su ljubazni i profesionalni. Svaka preporuka.", "Kristina V."], ["Najveći znalci svog posla, pre svega divni i ljubazni ljudi. Petar i Srđan uvek nasmejani i posvećeni svakom ljubimcu.", "Vlasnik ljubimca"], ["Sjajna veterinarska ambulanta. Za svaku preporuku.", "Tatjana"]], callUs: "Pozovite nas", galleryMore: "Više slika na našem Instagram profilu", send: "Pošalji zahtev", callInstead: "Pozovite", other: "Drugo", subject: "Zahtev za termin — Basna" },
-      en: { addr: "Fruškogorska 12, Novi Sad", call: "Call", callLong: "Call the clinic", heroA: "The health|of your pets", heroB: "is our|priority",
-        heroSub: "Welcome to Basna – a place where care, knowledge and experience stand behind every check-up, and your pets feel at home.",
+        trust: ["Iskustvo i poverenje", "Savremena oprema", "Radimo i nedeljom"], trustSub: ["", "", "Ned 10–12h"], hours: ["Pon–Pet · 9–20h", "Sub · 9–12h i 17–19h", "Ned · 10–12h"],
+        faq: [["Kako da zakažem pregled?", "Pozovite nas na 066 858 5854, pišite na Viber ili WhatsApp ili popunite kontakt formu ispod."], ["Koje je radno vreme?", "Pon–Pet 9–20h · Sub 9–12h i 17–19h · Ned 10–12h"], ["Šta da radim u hitnom slučaju?", "Pozovite nas odmah na 066 858 5854."], ["Koja je cena pregleda?", "Cene počinju od navedenog iznosa u cenovniku, a tačnu cenu vam kažemo unapred, na poziv."]],
+        fName: "Ime", fNamePh: "Vaše ime", fPhone: "Telefon", fService: "Usluga", fMsg: "Poruka", fMsgPh: "Za koga, kakav problem…", galleryTitle: "Naši pacijenti", galleryLead: "Mali i veliki, mirni i nestašni, svi su nam podjednako dragi.", reviewsTitle: "Šta kažu vlasnici", ratingNum: "5,0", ratingOn: GR + " recenzija na Google-u", reviews: [["Veterinarska stanica kojoj verujemo. Doktori su ljubazni i profesionalni. Svaka preporuka.", "Kristina V."], ["Najveći znalci svog posla, pre svega divni i ljubazni ljudi. Petar i Srđan uvek nasmejani i posvećeni svakom ljubimcu.", "Vlasnik ljubimca"], ["Sjajna veterinarska ambulanta. Za svaku preporuku.", "Tatjana"]], callUs: "Pozovite nas", galleryMore: "Više slika na našem Instagram profilu", send: "Pošalji zahtev", callInstead: "Pozovite", other: "Drugo", subject: "Zahtev za termin — Basna" },
+      en: { city: "Novi Sad", callNum: "Call 066 858 5854", emerg: "Emergency? Call right away 066 858 5854", errName: "Please enter your name.", errPhone: "Please enter your phone number.", okMsg: "Thank you! We will get back to you today.", errSend: "Sending failed. Please call us on 066 858 5854.", addr: "Fruškogorska 12, Novi Sad", call: "Call", callLong: "Call the clinic", heroA: "Veterinary|clinic", heroB: "in Novi Sad",
+        heroSub: "Fruškogorska 12 · Open on Sundays",
         servicesTitle: "Services", teamTitle: "Our team", teamLead: "Petar and Srđan, the vets at Basna clinic in Novi Sad.", vet: "DVM", patientsTitle: "Our patients",
         nav: ["Services", "Reviews", "Prices", "Team", "Patients", "Blog", "FAQ", "Location", "Contact"], contact: "Contact", formTitle: "Book a check-up", sub: "Veterinary clinic",
-        trust: ["Experience and trust", "Modern equipment", "Open on Sundays"], hours: ["Mon–Fri · 09–20", "Saturday · 09–12 and 17–19", "Sunday · 10–12"],
-        faq: [["How do I book a visit?", "Call us on 066 858 5854, write on Viber or WhatsApp, or fill in the contact form below."], ["What are the opening hours?", "Monday–Friday 09–20, Saturday 09–12 and 17–19, Sunday 10–12."], ["What should I do in an emergency?", "Call us right away on 066 858 5854."], ["What is the price of a check-up?", "Prices start from the amount listed in the price list, and we tell you the exact price in advance when you call."]],
-        fName: "Name", fNamePh: "Your name", fPhone: "Phone", fService: "Service", fMsg: "Message", fMsgPh: "For whom, what problem…", galleryTitle: "Our patients", galleryLead: "Big and small, calm and mischievous, we love them all equally.", reviewsTitle: "What owners say", ratingNum: "5.0", ratingOn: "on Google", reviews: [["A clinic we trust. The doctors are kind and professional. Highly recommended.", "Kristina V."], ["The greatest experts at their job, and above all wonderful, kind people. Petar and Srđan are always smiling and devoted to every pet.", "Pet owner"], ["A great veterinary clinic. Recommended to everyone.", "Tatjana"]], callUs: "Call us", galleryMore: "More photos on our Instagram profile", send: "Send request", callInstead: "Call", other: "Other", subject: "Appointment request — Basna" },
-      ru: { addr: "Фрушкогорска 12, Нови-Сад", call: "Позвоните", callLong: "Позвоните в клинику", heroA: "Здоровье ваших|питомцев", heroB: "наш|приоритет",
-        heroSub: "Добро пожаловать в Басну – место, где за каждым осмотром стоят внимание, знания и опыт, а ваши питомцы чувствуют себя как дома.",
+        trust: ["Experience and trust", "Modern equipment", "Open on Sundays"], trustSub: ["", "", "Sun 10–12h"], hours: ["Mon–Fri · 9–20h", "Sat · 9–12h and 17–19h", "Sun · 10–12h"],
+        faq: [["How do I book a visit?", "Call us on 066 858 5854, write on Viber or WhatsApp, or fill in the contact form below."], ["What are the opening hours?", "Mon–Fri 9–20h · Sat 9–12h and 17–19h · Sun 10–12h"], ["What should I do in an emergency?", "Call us right away on 066 858 5854."], ["What is the price of a check-up?", "Prices start from the amount listed in the price list, and we tell you the exact price in advance when you call."]],
+        fName: "Name", fNamePh: "Your name", fPhone: "Phone", fService: "Service", fMsg: "Message", fMsgPh: "For whom, what problem…", galleryTitle: "Our patients", galleryLead: "Big and small, calm and mischievous, we love them all equally.", reviewsTitle: "What owners say", ratingNum: "5.0", ratingOn: GR + " reviews on Google", reviews: [["A clinic we trust. The doctors are kind and professional. Highly recommended.", "Kristina V."], ["The greatest experts at their job, and above all wonderful, kind people. Petar and Srđan are always smiling and devoted to every pet.", "Pet owner"], ["A great veterinary clinic. Recommended to everyone.", "Tatjana"]], callUs: "Call us", galleryMore: "More photos on our Instagram profile", send: "Send request", callInstead: "Call", other: "Other", subject: "Appointment request — Basna" },
+      ru: { city: "Нови-Сад", callNum: "Позвоните 066 858 5854", emerg: "Срочный случай? Звоните сразу 066 858 5854", errName: "Введите ваше имя.", errPhone: "Введите номер телефона.", okMsg: "Спасибо! Мы свяжемся с вами сегодня.", errSend: "Не удалось отправить. Позвоните нам: 066 858 5854.", addr: "Фрушкогорска 12, Нови-Сад", call: "Позвоните", callLong: "Позвоните в клинику", heroA: "Ветеринарная|клиника", heroB: "в Нови-Саде",
+        heroSub: "Фрушкогорска 12 · Работаем и в воскресенье",
         servicesTitle: "Услуги", teamTitle: "Наша команда", teamLead: "Петар и Срджан, ветеринары клиники Basna в Нови-Саде.", vet: "д-р вет. мед.", patientsTitle: "Наши пациенты",
         nav: ["Услуги", "Отзывы", "Цены", "Команда", "Пациенты", "Блог", "FAQ", "Локация", "Контакт"], contact: "Контакт", formTitle: "Запишитесь на осмотр", sub: "Ветеринарная клиника",
-        trust: ["Опыт и доверие", "Современное оборудование", "Работаем и в воскресенье"], hours: ["Пн–Пт · 09–20", "Суббота · 09–12 и 17–19", "Воскресенье · 10–12"],
-        faq: [["Как записаться на приём?", "Позвоните по номеру 066 858 5854, напишите в Viber или WhatsApp либо заполните форму ниже."], ["Какой график работы?", "Понедельник–пятница 09–20, суббота 09–12 и 17–19, воскресенье 10–12."], ["Что делать в экстренном случае?", "Немедленно позвоните по номеру 066 858 5854."], ["Какова цена осмотра?", "Цены начинаются с указанной в прайс-листе суммы, точную цену называем заранее по телефону."]],
-        fName: "Имя", fNamePh: "Ваше имя", fPhone: "Телефон", fService: "Услуга", fMsg: "Сообщение", fMsgPh: "Для кого, какая проблема…", galleryTitle: "Наши пациенты", galleryLead: "Большие и маленькие, спокойные и озорные, все они нам одинаково дороги.", reviewsTitle: "Что говорят владельцы", ratingNum: "5,0", ratingOn: "в Google", reviews: [["Ветеринарная клиника, которой мы доверяем. Врачи любезны и профессиональны. Очень рекомендуем.", "Кристина В."], ["Настоящие знатоки своего дела и, прежде всего, замечательные, добрые люди. Петар и Срджан всегда улыбаются и внимательны к каждому питомцу.", "Владелец питомца"], ["Отличная ветеринарная клиника. Рекомендую всем.", "Татьяна"]], callUs: "Позвоните нам", galleryMore: "Больше фото в нашем профиле Instagram", send: "Отправить запрос", callInstead: "Позвоните", other: "Другое", subject: "Запрос на приём — Basna" }
+        trust: ["Опыт и доверие", "Современное оборудование", "Работаем и в воскресенье"], trustSub: ["", "", "Вс 10–12"], hours: ["Пн–Пт · 9–20", "Сб · 9–12 и 17–19", "Вс · 10–12"],
+        faq: [["Как записаться на приём?", "Позвоните по номеру 066 858 5854, напишите в Viber или WhatsApp либо заполните форму ниже."], ["Какой график работы?", "Пн–Пт 9–20 · Сб 9–12 и 17–19 · Вс 10–12"], ["Что делать в экстренном случае?", "Немедленно позвоните по номеру 066 858 5854."], ["Какова цена осмотра?", "Цены начинаются с указанной в прайс-листе суммы, точную цену называем заранее по телефону."]],
+        fName: "Имя", fNamePh: "Ваше имя", fPhone: "Телефон", fService: "Услуга", fMsg: "Сообщение", fMsgPh: "Для кого, какая проблема…", galleryTitle: "Наши пациенты", galleryLead: "Большие и маленькие, спокойные и озорные, все они нам одинаково дороги.", reviewsTitle: "Что говорят владельцы", ratingNum: "5,0", ratingOn: GR + " отзывов в Google", reviews: [["Ветеринарная клиника, которой мы доверяем. Врачи любезны и профессиональны. Очень рекомендуем.", "Кристина В."], ["Настоящие знатоки своего дела и, прежде всего, замечательные, добрые люди. Петар и Срджан всегда улыбаются и внимательны к каждому питомцу.", "Владелец питомца"], ["Отличная ветеринарная клиника. Рекомендую всем.", "Татьяна"]], callUs: "Позвоните нам", galleryMore: "Больше фото в нашем профиле Instagram", send: "Отправить запрос", callInstead: "Позвоните", other: "Другое", subject: "Запрос на приём — Basna" }
     };
-    const t = this.clean(T[L]), vt = this.clean(C.t[L]), fmt = (n) => n.toLocaleString(L === "sr" ? "de-DE" : L === "ru" ? "ru-RU" : "en-US");
+    const t = this.clean(T[L]); t.faq[1] = [t.faq[1][0], T[L].faq[1][1]]; const vt = this.clean(C.t[L]), fmt = (n) => n.toLocaleString(L === "sr" ? "de-DE" : L === "ru" ? "ru-RU" : "en-US");
     const ids = ["b-usluge", "b-recenzije", "b-cenovnik", "b-tim", "b-pacijenti", "b-blog", "b-faq", "b-kontakt", "b-forma"];
     const navIcons = ["ph-stethoscope", "ph-star", "ph-tag", "ph-users-three", "ph-paw-print", "ph-newspaper", "ph-question", "ph-map-pin", "ph-phone-call"];
     const pageRoute = { "b-usluge": "usluge", "b-cenovnik": "cenovnik", "b-pacijenti": "pacijenti" };
     const nav = t.nav.map((label, i) => ({ label, icon: navIcons[i], delay: (i * 0.05) + "s", onClick: narrow && ids[i] !== "b-kontakt" && ids[i] !== "b-forma" ? this.go(pageRoute[ids[i]] || "s/" + ids[i]) : this.scrollTo(ids[i]) }));
     const services = this.clean(C.services.filter(s => s.id !== "ostalo").map(s => ({ id: s.id, icon: s.icon, ...s[L] })));
-    const F0 = F.service || services[0].name;
-    const priceGroups = (C.prices || []).filter(p => ["preventiva", "dijagnostika", "lecenje", "hirurgija"].includes(p.id)).slice(0, mob ? 4 : 3).map(p => { const sv = services.find(x => x.id === p.id) || {}; return { name: sv.name, icon: sv.icon, rows: p.rows.slice(0, 3).map(r => ({ name: this.clean(r[L] || r.sr), price: vt.priceFrom + " " + fmt(r.from) + " " + vt.priceUnit })) }; });
-    const ai = (id, h) => ({ display: "block", aspectRatio: h, backgroundImage: "url(blog-" + id + ".png)", backgroundSize: "cover", backgroundPosition: "center", backgroundColor: "var(--color-neutral-200)", borderRadius: "var(--radius-md)" });
-    const articles = this.clean(C.articles.map(a => ({ id: a.id, ...a[L], body: a[L].body.filter(p => !/Galja|Галя|Галь/.test(p)), imgStyle: ai(a.id, "16/10"), imgBig: ai(a.id, "16/9"), href: "#/savet/" + a.id, open: this.go("savet/" + a.id) })));
+    const F0 = F.service || services[0].name, hs = this.hoursStatus(L);
+    const priceGroups = (C.prices || []).filter(p => ["preventiva", "dijagnostika", "lecenje", "hirurgija"].includes(p.id)).slice(0, 4).map(p => { const sv = services.find(x => x.id === p.id) || {}; return { name: sv.name, icon: sv.icon, rows: p.rows.slice(0, 3).map(r => ({ name: this.clean(r[L] || r.sr), price: vt.priceFrom + " " + fmt(r.from) + " " + vt.priceUnit })) }; });
+    const ai = (id, h, eager) => ({ display: "block", aspectRatio: h, ...(eager ? { backgroundImage: "url(blog-" + id + ".webp)" } : {}), backgroundSize: "cover", backgroundPosition: "center", backgroundColor: "var(--color-neutral-200)", borderRadius: "var(--radius-md)" });
+    const articles = this.clean(C.articles.map(a => ({ id: a.id, ...a[L], body: a[L].body.filter(p => !/Galja|Галя|Галь/.test(p)), bg: "blog-" + a.id + ".webp", imgStyle: ai(a.id, "16/10"), imgBig: ai(a.id, "16/9", 1), href: "#/savet/" + a.id, open: this.go("savet/" + a.id) })));
     const artObj = articles.find(a => a.id === sub) || articles[0] || { title: "", lead: "", body: [], imgBig: {} };
     const faqItems = t.faq.map((q, i) => { const open = this.state.faqOpen === i; return { q: q[0], a: q[1], open, sign: open ? "−" : "+", toggle: () => this.setState({ faqOpen: open ? null : i }), boxStyle: { borderRadius: 20, background: open ? "var(--color-accent-100)" : "var(--color-neutral-100)", boxShadow: open ? "none" : "var(--shadow-sm)", transition: "background 200ms" } }; });
     return {
       vt, priceGroups, articles, art: artObj, faqItems, isHome: !page || page === "s", isServices: page === "usluge", isPrices: page === "cenovnik", isGallery: page === "pacijenti", isArticle: page === "savet",
       goHome: this.go(""), goServices: this.go("usluge"), goPrices: this.go("cenovnik"), goGallery: this.go("pacijenti"),
-      homeServices: services.filter(s => s.id !== "ostalo").slice(0, mob ? 4 : 99).map(s => ({ ...s, href: "#/usluge/" + s.id, open: this.go("usluge/" + s.id) })),
+      homeServices: services.filter(s => s.id !== "ostalo").map(s => ({ ...s, href: "#/usluge/" + s.id, open: this.go("usluge/" + s.id) })),
       priceGroupsAll: (C.prices || []).filter(p => p.id !== "ostalo").map((p, i, arr) => { const sv = services.find(x => x.id === p.id) || {}; return { name: sv.name, icon: sv.icon, rows: p.rows.map(r => ({ name: this.clean(r[L] || r.sr), price: vt.priceFrom + " " + fmt(r.from) + " " + vt.priceUnit })), bandStyle: { background: i % 2 ? "var(--color-accent-100)" : "var(--color-bg)" }, pad: { maxWidth: 1600, margin: "0 auto", padding: (mob && i === 0 ? "24px" : "48px") + " clamp(20px,5vw,72px) " + (mob && i === arr.length - 1 ? "8px" : "48px"), display: "flex", flexWrap: "wrap", gap: mob ? "6px 64px" : "24px 64px", alignItems: "flex-start" } }; }),
       serviceRows: services.map((s, i) => ({ ...s, anchor: "usluga-" + s.id, bandStyle: { background: i % 2 ? "var(--color-bg)" : "var(--color-accent-100)", borderRadius: "50% 50% 0 0 / 56px 56px 0 0", marginTop: i ? -40 : 0, position: "relative", padding: mob && i === 0 ? "32px 0 64px" : "64px 0 80px" },
         rowStyle: mob ? { maxWidth: 1600, margin: "0 auto", padding: "0 clamp(20px,5vw,72px)", display: "flex", flexDirection: "column", gap: 20 } : { maxWidth: 1600, margin: "0 auto", padding: "0 clamp(20px,5vw,72px)", display: "flex", flexWrap: "wrap", gap: "40px 64px", alignItems: "center", flexDirection: i % 2 ? "row-reverse" : "row" },
@@ -439,16 +472,16 @@ class Component extends DCLogic {
         iconStyle: { width: mob ? 56 : 64, height: mob ? 56 : 64, flex: "none", borderRadius: "50%", background: "var(--color-bg)", display: "grid", placeItems: "center", boxShadow: "var(--shadow-sm)" }, iconSize: mob ? "28px" : "32px",
         imgStyle: { width: "100%", height: "100%", backgroundImage: "url(usluga-" + s.id + ".png)", backgroundSize: "cover", backgroundPosition: "center", backgroundColor: "var(--color-neutral-200)" } })),
       collageStyle: { display: "grid", gridTemplateColumns: mob ? "repeat(2,1fr)" : "repeat(4,1fr)", gridAutoRows: mob ? "150px" : "clamp(160px,17vw,260px)", gridAutoFlow: "dense", gap: mob ? 10 : 16 },
-      collage: (mob ? [[2,2],[1,1],[1,1],[1,2],[1,1],[2,1],[1,1],[1,2],[1,1],[2,2],[1,1],[1,1],[1,1]] : [[2,2],[1,1],[1,1],[1,2],[1,1],[2,1],[1,1],[1,2],[1,1],[2,2],[1,1],[2,1],[2,1]]).map((sp, i) => ({ i, open: () => this.setState({ lb: i }), style: { opacity: 0, transform: "translateY(48px) scale(0.94)", transition: "opacity 800ms ease, transform 800ms cubic-bezier(.2,.8,.2,1), filter 200ms", gridColumn: "span " + Math.min(sp[0], mob ? 2 : 4), gridRow: "span " + sp[1], border: 0, padding: 0, cursor: "zoom-in", borderRadius: 22, backgroundColor: "var(--color-neutral-200)", backgroundImage: "url(p" + [2,3,13,4,5,6,7,8,9,10,11,12,14][i] + ".png)", backgroundSize: "cover", backgroundPosition: "center", boxShadow: "var(--shadow-md)", } })),
+      collage: (mob ? [[2,2],[1,1],[1,1],[1,2],[1,1],[2,1],[1,1],[1,2],[1,1],[2,2],[1,1],[1,1],[1,1]] : [[2,2],[1,1],[1,1],[1,2],[1,1],[2,1],[1,1],[1,2],[1,1],[2,2],[1,1],[2,1],[2,1]]).map((sp, i) => ({ i, bg: "p" + [2,3,13,4,5,6,7,8,9,10,11,12,14][i] + ".webp", open: () => this.setState({ lb: i }), style: { opacity: 0, transform: "translateY(48px) scale(0.94)", transition: "opacity 800ms ease, transform 800ms cubic-bezier(.2,.8,.2,1), filter 200ms", gridColumn: "span " + Math.min(sp[0], mob ? 2 : 4), gridRow: "span " + sp[1], border: 0, padding: 0, cursor: "zoom-in", borderRadius: 22, backgroundColor: "var(--color-neutral-200)", backgroundSize: "cover", backgroundPosition: "center", boxShadow: "var(--shadow-md)", } })),
       lbOpen: this.state.lb != null, lbClose: () => this.setState({ lb: null }), lbPrev: (e) => { e.stopPropagation(); this.lb(-1); }, lbNext: (e) => { e.stopPropagation(); this.lb(1); },
-      lbStyle: { width: "min(100%,900px)", height: "min(100%,80vh)", backgroundImage: "url(p" + [2,3,13,4,5,6,7,8,9,10,11,12,14][this.state.lb ?? 0] + ".png)", backgroundSize: "contain", backgroundRepeat: "no-repeat", backgroundPosition: "center" },
-      sliderRef: this.sliderRef, arrowInset: narrow ? "8px" : "-24px", ...this.sliderVals(Array.from({ length: 13 }, (_, i) => ({ style: { backgroundImage: "url(p" + (i + 2) + ".png)" } }))),
-      reviews: t.reviews.map(r => ({ q: "„" + r[0] + "“", a: r[1] })), toReviews: this.scrollTo("b-recenzije"),
+      lbStyle: { width: "min(100%,900px)", height: "min(100%,80vh)", backgroundImage: "url(p" + [2,3,13,4,5,6,7,8,9,10,11,12,14][this.state.lb ?? 0] + ".webp)", backgroundSize: "contain", backgroundRepeat: "no-repeat", backgroundPosition: "center" },
+      sliderRef: this.sliderRef, arrowInset: narrow ? "8px" : "-24px", ...this.sliderVals(Array.from({ length: 13 }, (_, i) => ({ bg: "p" + (i + 2) + ".webp" }))),
+      reviews: t.reviews.map(r => ({ q: "„" + r[0] + "“", a: ["Vlasnik ljubimca", "Pet owner", "Владелец питомца"].includes(r[1]) ? REV2_NAME : r[1] })).filter(r => r.a), toReviews: this.scrollTo("b-recenzije"),
       navWrap: narrow ? { background: "#ffffff", position: "sticky", top: 0, zIndex: 80, boxShadow: "0 1px 0 rgba(0,54,59,0.08)" } : { background: "#ffffff" }, callAlign: "center",
-      t, c, nav, services, narrow, wide: !narrow, hours: t.hours.map(x => { const p = x.split(" · "); return { d: p[0], t: p[1] }; }),
+      t, c, nav, services, narrow, wide: !narrow, hours: T[L].hours.map(x => { const p = x.split(" · "); return { d: p[0], t: p[1] }; }),
       toTop: this.scrollTo(null), showMenu: narrow && this.state.menu, toggleMenu: () => { window.scrollTo(0, 0); this.setState(s => ({ menu: !s.menu })); },
-      hPos: mob ? "50% 25%" : "50% 20%",
-      h1Size: mob ? "min(" + (L === "ru" ? "5.2vw" : "5.7vw") + ", 26px)" : "clamp(28px,min(4vw,6.2vh),76px)",
+      hPos: mob ? "50% 25%" : "50% 35%",
+      h1Size: mob ? "min(" + (L === "ru" ? "4.6vw" : "5vw") + ", 26px)" : "clamp(26px,min(3vw,5.2vh),56px)",
       revGap: mob ? "16px" : "32px",
       svcH1Gap: mob ? "24px" : "0px",
       priceGap: mob ? "36px" : "0px",
@@ -457,21 +490,29 @@ class Component extends DCLogic {
       priceEndPad: mob ? "28px" : "40px", priceEndGap: mob ? "40px" : "20px",
       galHeadGap: mob ? "8px" : "24px",
       galIntro: { maxWidth: 1600, margin: "0 auto", padding: mob ? "28px clamp(20px,5vw,72px) 32px" : "32px clamp(20px,5vw,72px) 40px", display: "flex", flexDirection: "column", gap: mob ? 12 : 16 },
-      footerStyle: { background: "var(--color-accent-100)" },
+      footerStyle: { background: "var(--color-accent-100)", paddingBottom: mob ? 76 : 0 },
+      mob, notMob: !mob, blogTitleMin: mob ? "0" : "2.5em", toForm: this.scrollTo("b-forma"),
+      ctaPrimary: { color: "var(--color-bg)", fontSize: 18, padding: "14px 28px", borderRadius: 999, whiteSpace: "nowrap", gap: 10, justifyContent: "center", flex: mob ? "1 1 100%" : "0 0 auto" },
+      ctaSecondary: { fontSize: 17, padding: "14px 28px", borderRadius: 999, whiteSpace: "nowrap", justifyContent: "center", flex: mob ? "1 1 100%" : "0 0 auto" },
+      status: hs.text, statusDot: { width: 10, height: 10, borderRadius: "50%", flex: "none", background: hs.open ? "var(--color-accent)" : "var(--color-neutral-500)" },
+      teamGrid: mob ? { display: "grid", gridTemplateColumns: "minmax(0,1fr)", gap: 32 } : { display: "grid", gridTemplateColumns: "repeat(2,minmax(0,420px))", justifyContent: "center", gap: 32 },
+      barStyle: { position: "fixed", left: 0, right: 0, bottom: 0, zIndex: 85, padding: "10px 16px calc(10px + env(safe-area-inset-bottom))", background: "#ffffff", boxShadow: "0 -2px 14px rgba(0,54,59,0.14)", transform: this.state.bar ? "none" : "translateY(120%)", transition: "transform 250ms ease" },
+      sending: this.state.sending, formMsg: this.state.formStatus === "ok" ? t.okMsg : this.state.formStatus === "err" ? t.errSend : "", formMsgColor: this.state.formStatus === "ok" ? "var(--color-accent-700)" : "var(--color-accent-2)",
+      invName: (e) => e.target.setCustomValidity(t.errName), invPhone: (e) => e.target.setCustomValidity(t.errPhone), clrVal: (e) => e.target.setCustomValidity(""),
       faqGap: mob ? "4px" : "0px",
       h1LH: mob ? "1.3" : "0.98",
       svcIntro: { maxWidth: 1600, margin: "0 auto", padding: mob ? "28px clamp(20px,5vw,72px) 28px" : "32px clamp(20px,5vw,72px) 64px", display: "flex", flexDirection: "column", gap: mob ? 4 : 16 },
       svcGrid: mob ? { display: "grid", gridTemplateColumns: "repeat(2,minmax(0,1fr))", gap: "36px 24px", width: "100%" } : { display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(min(100%,150px),1fr))", gap: "40px 24px" },
       hGlow: { display: "none" }, hWrap: { maxWidth: 1600, margin: "0 auto", position: "relative", display: mob ? "flex" : "block", flexDirection: "column",  },
-      hPhoto: { position: mob ? "relative" : "absolute", order: mob ? 2 : 0, top: 0, right: 0, height: mob ? 380 : "100%", flex: "none", width: mob ? "100%" : "58%", WebkitMaskImage: mob ? "linear-gradient(to top,#000 75%,transparent 100%)" : "linear-gradient(to right,transparent 0,#000 26%),linear-gradient(to top,transparent 0,#000 14%)", maskImage: mob ? "linear-gradient(to top,#000 75%,transparent 100%)" : "linear-gradient(to right,transparent 0,#000 26%),linear-gradient(to top,transparent 0,#000 14%)", WebkitMaskComposite: "source-in", maskComposite: "intersect" },
-      hShade: { position: "absolute", inset: 0, zIndex: 1, pointerEvents: "none", display: mob ? "none" : "block", background: "linear-gradient(90deg,#ffffff 0,#ffffff 40%,rgba(255,255,255,0.6) 48%,transparent 58%)" },
-      hText: { position: "relative", zIndex: 2, boxSizing: "border-box", width: mob ? "auto" : "46%", minHeight: mob ? "auto" : "max(500px, calc(100svh - 166px))", order: mob ? 1 : 0, padding: mob ? "12px clamp(20px,5vw,72px) 8px" : "20px clamp(20px,5vw,72px)", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "flex-start", gap: mob ? "clamp(18px,2.4vw,30px)" : "clamp(8px,1.6vh,20px)" },
+      hPhoto: { position: mob ? "relative" : "absolute", order: mob ? 2 : 0, top: 0, right: 0, height: mob ? 380 : "100%", flex: "none", width: mob ? "100%" : "58%", WebkitMaskImage: mob ? "linear-gradient(to top,#000 75%,transparent 100%)" : "linear-gradient(to right,transparent 0,#000 6%)", maskImage: mob ? "linear-gradient(to top,#000 75%,transparent 100%)" : "linear-gradient(to right,transparent 0,#000 6%)", WebkitMaskComposite: "source-in", maskComposite: "intersect" },
+      hShade: { position: "absolute", inset: 0, zIndex: 1, pointerEvents: "none", display: "none" },
+      hText: { position: "relative", zIndex: 2, boxSizing: "border-box", width: mob ? "auto" : "42%", minHeight: mob ? "auto" : "max(500px, calc(100svh - 166px))", order: mob ? 1 : 0, padding: mob ? "12px clamp(20px,5vw,72px) 8px" : "20px clamp(20px,5vw,72px)", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "flex-start", gap: mob ? "clamp(18px,2.4vw,30px)" : "clamp(8px,1.6vh,20px)" },
       heroAria: (t.heroA + " " + t.heroB).split("|").join(" "),
       wordsA: (mob ? [t.heroA.split("|").join(" ")] : t.heroA.split("|")).map((w, i) => ({ t: w, style: { display: "block", whiteSpace: "nowrap", animation: "b-rise .8s cubic-bezier(.2,.8,.2,1) " + (0.5 + i * 0.18) + "s both" } })),
       wordsB: (mob ? [t.heroB.split("|").join(" ")] : t.heroB.split("|")).map((w, i) => ({ t: w, style: { display: "block", whiteSpace: "nowrap", animation: "b-rise .8s cubic-bezier(.2,.8,.2,1) " + (0.9 + i * 0.18) + "s both" } })),
-      trust: t.trust.map((label, i) => ({ label, icon: ["ph-heart", "ph-shield-plus", "ph-clock"][i] })),
-      team: [{ id: "srdjan", name: "Srđan Japuš", img: "tim-srdjan.png" }, { id: "petar", name: "Petar Božić", img: "tim-petar.png" }],
-      gallery: Array.from({ length: 13 }, (_, i) => ({ style: { aspectRatio: "1", borderRadius: "var(--radius-md)", backgroundColor: "var(--color-neutral-200)", backgroundImage: "url(p" + (i + 2) + ".png)", backgroundSize: "cover", backgroundPosition: "center", boxShadow: "var(--shadow-sm)" } })),
+      trust: t.trust.map((label, i) => ({ label, sub: T[L].trustSub[i], icon: ["ph-heart", "ph-shield-plus", "ph-clock"][i] })),
+      team: [{ id: "srdjan", name: "Srđan Japuš", img: "tim-srdjan.webp" }, { id: "petar", name: "Petar Božić", img: "tim-petar.webp" }],
+      gallery: Array.from({ length: 13 }, (_, i) => ({ style: { aspectRatio: "1", borderRadius: "var(--radius-md)", backgroundColor: "var(--color-neutral-200)", backgroundImage: "url(p" + (i + 2) + ".webp)", backgroundSize: "cover", backgroundPosition: "center", boxShadow: "var(--shadow-sm)" } })),
       langs: ["sr", "en", "ru"].map(code => ({ label: code.toUpperCase(), onClick: () => { localStorage.setItem("basna-lang", code); this.setState({ lang: code }); },
         style: { font: "inherit", fontSize: 13, fontWeight: 600, letterSpacing: "0.04em", cursor: "pointer", border: 0, borderRadius: 999, padding: "4px 10px", minWidth: 36, background: code === L ? "var(--color-accent-700)" : "transparent", color: code === L ? "var(--color-bg)" : "var(--color-accent-900)" } })),
       serviceNames: [...services.map(s => s.name), t.other], fName: F.name, fPhone: F.phone, fService: F0, fMsg: F.msg,
@@ -479,7 +520,7 @@ class Component extends DCLogic {
       onPhone: (e) => { const v = e.target.value; this.setState(s => ({ form: { ...s.form, phone: v } })); },
       onService: (e) => { const v = e.target.value; this.setState(s => ({ form: { ...s.form, service: v } })); },
       onMsg: (e) => { const v = e.target.value; this.setState(s => ({ form: { ...s.form, msg: v } })); },
-      submitForm: (e) => { e.preventDefault(); const body = t.fName + ": " + F.name + "\n" + t.fPhone + ": " + F.phone + "\n" + t.fService + ": " + F0 + "\n" + t.fMsg + ": " + F.msg; window.location.href = c.mailto + "?subject=" + encodeURIComponent(t.subject) + "&body=" + encodeURIComponent(body); }
+      submitForm: async (e) => { e.preventDefault(); if (this.state.sending) return; this.setState({ sending: true, formStatus: null }); try { const r = await fetch(FORMSPREE, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ime: F.name, telefon: F.phone, usluga: F0, poruka: F.msg, jezik: L, datum: new Date().toLocaleString("sr-RS", { timeZone: "Europe/Belgrade" }), vreme_iso: new Date().toISOString(), stranica: location.href }) }); if (!r.ok) throw 0; this.setState({ sending: false, formStatus: "ok", form: { name: "", phone: "", service: "", msg: "" } }); } catch (_) { this.setState({ sending: false, formStatus: "err" }); } }
     };
   }
 }

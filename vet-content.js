@@ -174,7 +174,7 @@ const t = {
     teamTitle: "Naš tim", teamLead: "Vaš ljubimac je kod nas u sigurnim rukama.", meetTeam: "Upoznajte tim", homeTeamTitle: "Upoznajte tim", aboutUs: "O nama",
     patientsTitle: "Naši pacijenti", patientsLead: "Naši zadovoljni pacijenti i njihovi vlasnici – mali znak da je briga o zdravlju uvek najbolja odluka.", followIg: "Pratite nas na Instagramu", homePatientsTitle: "Neki od naših pacijenata", allPatients: "Pogledajte još slika",
     reviewsTitle: "Šta kažu vlasnici", reviewsLead: "Pročitajte utiske vlasnika na Google-u ili ostavite svoj.", reviewsRead: "Recenzije na Google-u", reviewsWrite: "Ostavite recenziju",
-    blogTitle: "Blog", read: "Pročitaj",
+    blogTitle: "Blog", read: "Pročitajte",
     contactTitle: "Kako do nas", contactLead: "Bilo da želite da zakažete pregled, posavetujete se sa našim veterinarom, kupite hranu ili igračku, ili nam samo uputite pitanje – najlakše je da nas pozovete.",
     contactNote: "Naša veterinarska ambulanta se nalazi na granici opština Stari grad i Palilula.",
     directions: "Uputstva za dolazak", writeUs: "Pišite nam", phone: "Telefon", email: "Email",
