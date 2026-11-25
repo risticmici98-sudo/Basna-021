@@ -29,7 +29,7 @@
 <style>@keyframes b-fade12{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}@keyframes b-siren{0%,60%,100%{transform:rotate(0) scale(1)}10%{transform:rotate(-14deg) scale(1.15)}20%{transform:rotate(14deg) scale(1.15)}30%{transform:rotate(-10deg) scale(1.1)}40%{transform:rotate(10deg) scale(1.1)}50%{transform:rotate(0) scale(1)}}@keyframes b-photo{from{opacity:0;transform:scale(1.03)}to{opacity:1;transform:scale(1)}}@keyframes b-pulse{0%{box-shadow:0 0 0 0 rgba(47,163,95,.5)}70%{box-shadow:0 0 0 8px rgba(47,163,95,0)}100%{box-shadow:0 0 0 0 rgba(47,163,95,0)}}@media (prefers-reduced-motion:reduce){[style*="b-fade12"],[style*="b-photo"],[style*="b-pulse"],[style*="b-siren"],[style*="vp-ring"]{animation:none!important}}@keyframes b-float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-5px) rotate(-6deg)}}@keyframes b-pop{0%{transform:scale(.4);opacity:0}60%{transform:scale(1.15);opacity:1}100%{transform:scale(1)}}:root{--font-body:"Nunito",system-ui,sans-serif;--font-heading:"Nunito",system-ui,sans-serif;--color-bg:#ffffff;--color-text:#00363b;--color-accent:#00808a;--color-accent-100:#e3fafa;--color-accent-200:#c0f2f2;--color-accent-300:#8fe8e8;--color-accent-400:#33c4c8;--color-accent-500:#00808a;--color-accent-600:#006f77;--color-accent-700:#005d64;--color-accent-800:#004b51;--color-accent-900:#00363b;--color-accent-2:#d6006c}body{margin:0;background:#ffffff;color:#00363b;font-family:"Nunito",system-ui,sans-serif}h1,h2,h3{font-family:"Nunito",system-ui,sans-serif}a{color:var(--color-accent-700)}a:hover{color:var(--color-accent-600)}@keyframes vp-ring{0%,12%,100%{transform:rotate(0)}2%,6%{transform:rotate(-10deg)}4%,8%{transform:rotate(10deg)}10%{transform:rotate(0)}}@keyframes b-pop{0%{transform:scale(0);opacity:0}100%{transform:scale(1);opacity:1}}@keyframes b-disc{0%{transform:scale(.15) rotate(-40deg);opacity:0}100%{transform:scale(1) rotate(0);opacity:1}}@keyframes b-rise{0%{transform:translateY(36px);opacity:0}100%{transform:translateY(0);opacity:1}}@keyframes b-paw{0%,100%{opacity:0}15%,55%{opacity:.85}}@keyframes b-glow{0%{opacity:0;transform:scale(.6)}60%{opacity:1}100%{opacity:.85;transform:scale(1)}}@keyframes b-lights{0%{filter:brightness(.15) saturate(.1) blur(8px)}55%{filter:brightness(.7) saturate(.6) blur(2px)}100%{filter:none}}@keyframes b-kb{from{transform:scale(1)}to{transform:scale(1.09)}}@keyframes b-sweep{0%{transform:translateX(-70%);opacity:0}25%{opacity:1}100%{transform:translateX(190%);opacity:0}}@keyframes b-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}@media (prefers-reduced-motion:reduce){[style*="b-float"],[style*="b-lights"],[style*="b-sweep"],[style*="b-pop"],[style*="b-disc"],[style*="b-rise"],[style*="b-paw"]{animation:none!important;opacity:1!important}.vp-ring{animation:none!important}}</style>
 </helmet>
 <div style="min-height:100vh;display:flex;flex-direction:column">
-  <div style="background:#28cfcf;color:#00363b">
+  <div id="b-top" style="background:#28cfcf;color:#00363b">
     <div style="max-width:1600px;margin:0 auto;padding:8px clamp(16px,5vw,72px);display:flex;gap:12px;align-items:center;justify-content:space-between;font-size:14px">
       <a href="{{ c.maps }}" target="_blank" style="display:flex;align-items:center;gap:8px;color:#ffffff;text-decoration:none;min-width:0;line-height:1.2"><i class="ph-duotone ph-map-pin" style="font-size:20px;flex:none"></i><span style="font-size:{{ addrFont }};line-height:1.2;min-width:0">{{ t.addr }}</span></a>
       <div role="group" aria-label="Jezik" style="flex:none;display:flex;gap:2px;padding:3px;border-radius:999px;background:var(--color-bg);box-shadow:var(--shadow-sm)">
@@ -38,7 +38,7 @@
     </div>
   </div>
 
-  <div style="{{ navWrap }}"><nav class="nav" style="background:transparent;border:0;max-width:1600px;width:100%;margin:0 auto;padding:{{ navPad }} clamp(16px,5vw,72px);transition:padding .2s ease;flex-wrap:nowrap;gap:4px;align-items:center">
+  <div id="b-nav" style="{{ navWrap }}"><nav class="nav" style="background:transparent;border:0;max-width:1600px;width:100%;margin:0 auto;padding:{{ navPad }} clamp(16px,5vw,72px);transition:padding .2s ease;flex-wrap:nowrap;gap:4px;align-items:center">
     <div style="display:flex;flex-direction:row;align-items:center;gap:10px;flex:none;margin-right:auto"><sc-if value="{{ narrow }}" hint-placeholder-val="{{ false }}"><button type="button" onClick="{{ toggleMenu }}" aria-label="Meni" style="all:unset;cursor:pointer;color:#ffffff;padding:6px 2px;line-height:0"><i class="ph ph-list" style="font-size:32px"></i></button></sc-if><a href="#" onClick="{{ toTop }}" class="nav-brand" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#ffffff;flex:none">
       <img src="logo.png" alt="Basna" style="width:{{ logoSize }};height:{{ logoSize }};transition:width .2s ease,height .2s ease;border-radius:50%;display:block">
       <span style="display:flex;flex-direction:column;gap:2px"><span style="font-size:{{ brandSize }};transition:font-size .2s ease;line-height:1;letter-spacing:-0.01em">basna</span><sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}"><span style="font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.75)">{{ t.sub }}</span></sc-if></span>
@@ -46,7 +46,7 @@
     <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
       <sc-for list="{{ nav }}" as="n" hint-placeholder-count="9"><a href="#" onClick="{{ n.onClick }}" style="{{ n.style }}" style-hover="color:#2CD3D3">{{ n.label }}</a></sc-for>
     </sc-if>
-    <a class="btn" href="{{ c.tel }}" aria-label="{{ t.callLong }}" style="background:#2CD3D3;border-color:#2CD3D3;margin-left:clamp(12px,2vw,28px);flex:none;align-self:{{ callAlign }};color:#00363b;font-size:clamp(12px,3vw,16px);padding:clamp(9px,1.4vw,11px) clamp(11px,2.4vw,22px);border-radius:999px;white-space:nowrap;gap:8px"><i class="ph-duotone ph-phone-call vp-ring" style="font-size:20px;display:inline-block;animation:vp-ring 7s ease-in-out infinite 2s"></i>{{ t.call }}</a>
+    <a class="btn" href="{{ c.tel }}" aria-label="{{ t.callLong }}" style-hover="transform:translateY(-2px);box-shadow:0 8px 18px rgba(0,0,0,.22)" style="transition:transform .2s ease,box-shadow .2s ease;background:#2CD3D3;border-color:#2CD3D3;margin-left:clamp(12px,2vw,28px);flex:none;align-self:{{ callAlign }};color:#00363b;font-size:clamp(12px,3vw,16px);padding:clamp(9px,1.4vw,11px) clamp(11px,2.4vw,22px);border-radius:999px;white-space:nowrap;gap:8px"><i class="ph-duotone ph-phone-call" style="font-size:20px"></i>{{ t.call }}</a>
     
   </nav></div>
   <sc-if value="{{ showMenu }}" hint-placeholder-val="{{ false }}">
@@ -63,12 +63,12 @@
     <section style="background:#ffffff;position:relative;overflow:hidden">
       <div style="{{ hWrap }}">
         <div style="{{ hGlow }}"></div>
-        <div style="{{ hPhoto }}"><div data-h="par" style="position:absolute;inset:0;will-change:transform"><div style="position:absolute;inset:0"><div style="position:absolute;inset:0;background:url(hero.webp) {{ hPos }}/cover;animation:b-kb 18s ease-in-out infinite alternate"></div></div></div></div>
+        <div style="{{ hPhoto }}"><div data-h="par" style="{{ hParStyle }}"><img src="hero.webp" alt="" fetchpriority="high" style="{{ heroImg }}"></div></div>
         
         
         <div style="{{ hShade }}"></div>
         <div style="{{ hText }}">
-          <span style="{{ statusPill }}"><span style="{{ statusDot }}"></span><span>{{ status }}</span><sc-if value="{{ showEmerg }}" hint-placeholder-val="{{ false }}"><span>·</span><a href="{{ c.tel }}" style="color:inherit;text-decoration:underline;text-underline-offset:3px">{{ emergLabel }}</a></sc-if></span>
+          <span style="{{ statusPill }}"><span style="{{ statusDot }}"></span><span>{{ status }}<sc-if value="{{ statusEm }}" hint-placeholder-val="{{ false }}"><b style="color:#B3261E;font-weight:800">{{ statusEm }}</b></sc-if></span><sc-if value="{{ showEmerg }}" hint-placeholder-val="{{ false }}"><span>·</span><a href="{{ c.tel }}" style="color:inherit;text-decoration:underline;text-underline-offset:3px">{{ emergLabel }}</a></sc-if></span>
           <h1 aria-label="{{ heroAria }}" style="order:1;margin:0;font-size:{{ h1Size }};line-height:{{ h1LH }};letter-spacing:-0.02em;font-weight:800;color:#00363b">
             <sc-for list="{{ wordsA }}" as="w" hint-placeholder-count="3"><span style="{{ w.style }}">{{ w.t }}</span></sc-for><em style="font-weight:800;font-style:normal;color:#00808a"><sc-for list="{{ wordsB }}" as="w" hint-placeholder-count="2"><span style="{{ w.style }}">{{ w.t }}</span></sc-for></em>
           </h1>
@@ -289,7 +289,7 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { route: (location.hash || "#/").slice(2), lang: localStorage.getItem("basna-lang") || "sr", w: window.innerWidth, menu: false, art: null, faqOpen: null, scrolled: false, active: null, sending: false, formStatus: null, ready: !!(window.VET_CONTENT && window.VET_CONTENT.t.ru), form: { name: "", phone: "", service: "", msg: "" } };
+  state = { route: (location.hash || "#/").slice(2), lang: localStorage.getItem("basna-lang") || "sr", w: window.innerWidth, menu: false, art: null, faqOpen: null, scrolled: false, hOff: 132, hh: window.innerHeight, active: null, sending: false, formStatus: null, ready: !!(window.VET_CONTENT && window.VET_CONTENT.t.ru), form: { name: "", phone: "", service: "", msg: "" } };
   heroWrap = React.createRef();
   clean = (o) => typeof o === "string" ? o.replace(/\s[–—]\s/g, ", ").replace(/([^\s])[–—]([^\s])/g, "$1-$2") : Array.isArray(o) ? o.map(this.clean) : (o && Object.getPrototypeOf(o) === Object.prototype) ? Object.fromEntries(Object.entries(o).map(([k, v]) => [k, this.clean(v)])) : o;
   sliderRef = React.createRef();
@@ -307,6 +307,7 @@ class Component extends DCLogic {
     };
   }
   updateHero = () => {
+    if (window.scrollY < 8) { const ta = document.getElementById("b-top"), tb = document.getElementById("b-nav"); if (ta && tb) { const v = ta.offsetHeight + tb.offsetHeight; if (Math.abs(v - this.state.hOff) > 1) this.setState({ hOff: v }); } }
     const sc = window.scrollY > 8; if (sc !== this.state.scrolled) this.setState({ scrolled: sc });
     let act = null; for (const id of ["b-usluge", "b-tim", "b-recenzije", "b-pacijenti", "b-kontakt"]) { const el = document.getElementById(id); if (el && el.offsetParent !== null && el.getBoundingClientRect().top <= 140) act = id; } if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 4 && document.getElementById("b-kontakt")) act = "b-kontakt"; if (act === "b-kontakt") act = "b-forma"; if (act !== this.state.active) this.setState({ active: act });
     const par = document.querySelector("[data-h=par]"); if (!par) return;
@@ -315,9 +316,9 @@ class Component extends DCLogic {
   hoursStatus(L) {
     const n = new Date(new Date().toLocaleString("en-US", { timeZone: "Europe/Belgrade" })), d = n.getDay(), m = n.getHours() + n.getMinutes() / 60;
     const S = [[[10, 12]], [[9, 20]], [[9, 20]], [[9, 20]], [[9, 20]], [[9, 20]], [[9, 12], [17, 19]]];
-    const W = { sr: { o: "Otvoreno danas do ", h: "h", c: "Zatvoreno", e: "Hitni slučajevi: 066 858 5854" }, en: { o: "Open today until ", h: "h", c: "Closed", e: "Emergencies: 066 858 5854" }, ru: { o: "Открыто сегодня до ", h: " ч", c: "Закрыто", e: "Экстренные случаи: 066 858 5854" } }[L];
+    const W = { sr: { o: "Otvoreno danas do ", h: "h", c: "Zatvoreno, osim za ", ce: "hitne slučajeve", e: "Hitni slučajevi: 066 858 5854" }, en: { o: "Open today until ", h: "h", c: "Closed, except for ", ce: "emergencies", e: "Emergencies: 066 858 5854" }, ru: { o: "Открыто сегодня до ", h: " ч", c: "Закрыто, кроме ", ce: "экстренных случаев", e: "Экстренные случаи: 066 858 5854" } }[L];
     const cur = S[d].find(s => m >= s[0] && m < s[1]), open = !!cur;
-    return { open, text: open ? W.o + cur[1] + W.h : W.c, emerg: W.e };
+    return { open, text: open ? W.o + cur[1] + W.h : W.c, em: open ? "" : W.ce, emerg: W.e };
   }
   go(r) { return (e) => { if (e) e.preventDefault(); location.hash = "#/" + r; }; }
   anchorFromHash() { const [p, sub] = (this.state.route || "").split("/"); const el = p === "usluge" && sub && document.getElementById("usluga-" + sub); if (!el) return false; window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 96, behavior: "auto" }); return true; }
@@ -329,8 +330,8 @@ class Component extends DCLogic {
     this.lastStep = Date.now(); this.auto = setInterval(() => { if (this.sliderRef.current && Date.now() - this.lastStep >= 4000) this.step(1); }, 500);
     this.ro = new ResizeObserver(() => { const el = this.sliderRef.current; if (el && el.clientWidth !== this.state.sw) this.setState({ sw: el.clientWidth }); });
     let tries = 0; const tryObs = () => { if (this.sliderRef.current) this.ro.observe(this.sliderRef.current); else if (tries++ < 10) setTimeout(tryObs, 200); }; tryObs();
-    this.onResize = () => { this.setState({ w: window.innerWidth }); this.updateHero(); }; addEventListener("resize", this.onResize);
-    addEventListener("scroll", this.updateHero, { passive: true }); setTimeout(this.updateHero, 50); setTimeout(this.updateHero, 600);
+    this.onResize = () => { this.setState({ w: window.innerWidth, hh: window.innerHeight }); this.updateHero(); }; addEventListener("resize", this.onResize);
+    addEventListener("scroll", this.updateHero, { passive: true }); setTimeout(this.updateHero, 50); setTimeout(this.updateHero, 600); setTimeout(this.updateHero, 1600);
     const load = (src) => new Promise((res) => { const el = document.createElement("script"); el.src = src; el.onload = res; el.onerror = res; document.head.appendChild(el); });
     if (!this.state.ready) load("./vet-content.js?v=5").then(() => load("./vet-content-ru.js?v=5")).then(() => this.setState({ ready: true }));
   }
@@ -412,8 +413,9 @@ class Component extends DCLogic {
     const articles = this.clean(C.articles.map(a => ({ id: a.id, ...a[L], body: a[L].body.filter(p => !/Galja|Галя|Галь/.test(p)), bg: "blog-" + a.id + ".webp", imgStyle: ai(a.id, "16/10"), imgBig: ai(a.id, "16/9", 1), href: "#/savet/" + a.id, open: this.go("savet/" + a.id) })));
     const artObj = articles.find(a => a.id === sub) || articles[0] || { title: "", lead: "", body: [], imgBig: {} };
     const faqItems = t.faq.map((q, i) => { const open = this.state.faqOpen === i; return { q: q[0], a: q[1], open, sign: open ? "−" : "+", toggle: () => this.setState({ faqOpen: open ? null : i }), boxStyle: { borderRadius: 20, background: open ? "var(--color-accent-100)" : "var(--color-neutral-100)", boxShadow: open ? "none" : "var(--shadow-sm)", transition: "background 200ms" } }; });
+    const stk = narrow, cmp = stk && this.state.hh < 760;
     return {
-      addrFont: mob ? "12.5px" : "14px", leadSize: mob ? "16px" : L === "ru" ? "clamp(13px,1.1vw,15.5px)" : "clamp(14.5px,1.3vw,17px)", leadMargin: mob ? "12px 0 18px" : "20px 0 32px", artParas: artObj.body.map(p => { const N = "066 858 5854", i = p.indexOf(N); return i < 0 ? { a: p, has: false, b: "" } : { a: p.slice(0, i), has: true, b: p.slice(i + N.length) }; }),
+      addrFont: mob ? "12.5px" : "14px", leadSize: stk ? "clamp(13px," + (cmp ? 2.2 : 2) + "svh," + (mob ? 16 : 18) + "px)" : L === "ru" ? "clamp(13px,1.1vw,15.5px)" : "clamp(14.5px,1.3vw,17px)", leadMargin: stk ? (cmp ? "8px 0 12px" : mob ? "12px 0 18px" : "16px 0 24px") : "20px 0 32px", artParas: artObj.body.map(p => { const N = "066 858 5854", i = p.indexOf(N); return i < 0 ? { a: p, has: false, b: "" } : { a: p.slice(0, i), has: true, b: p.slice(i + N.length) }; }),
       patPhotos: ["p2", "p4", "p7"].map(n => ({ bg: n + ".webp", style: { display: "block", aspectRatio: mob ? "3/4" : "4/3", borderRadius: mob ? 14 : 20, backgroundSize: "cover", backgroundPosition: "center", backgroundColor: "var(--color-neutral-200)", boxShadow: "var(--shadow-sm)" } })),
       patBtn: { transition: "transform .2s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease, border-color .2s ease", fontSize: mob ? 18 : 17, boxSizing: "border-box", height: 52, padding: mob ? "0 28px" : "0 22px", background: "transparent", color: "var(--color-accent-700)", border: "2px solid var(--color-accent-700)", borderRadius: 999, whiteSpace: "nowrap", justifyContent: "center", alignItems: "center", flex: mob ? "1 1 100%" : "0 0 auto", alignSelf: mob ? "stretch" : "flex-start" },
       patGrid: { display: "grid", gridTemplateColumns: "repeat(3,minmax(0,1fr))", gap: mob ? 8 : 20 },
@@ -439,8 +441,9 @@ class Component extends DCLogic {
       navPad: this.state.scrolled ? "8px" : "12px", logoSize: this.state.scrolled ? "46px" : "clamp(48px,11vw,60px)", brandSize: this.state.scrolled ? "26px" : "clamp(26px,6vw,32px)", callAlign: "center",
       t, c, nav, services, narrow, wide: !narrow, hours: T[L].hours.map(x => { const p = x.split(" · "); return { d: p[0], t: p[1] }; }),
       toTop: this.scrollTo(null), showMenu: narrow && this.state.menu, toggleMenu: () => { window.scrollTo(0, 0); this.setState(s => ({ menu: !s.menu })); },
-      hPos: mob ? "50% 25%" : "50% 35%",
-      h1Size: mob ? "40px" : "clamp(44px,5vw,64px)",
+      hParStyle: { position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: stk ? "center" : "flex-end", willChange: "transform" },
+      heroImg: { maxWidth: "100%", maxHeight: "100%", width: "auto", height: "auto", display: "block", borderRadius: stk ? 20 : "0 0 0 24px" },
+      h1Size: stk ? "clamp(24px,min(" + (mob ? 10 : 6.5) + "vw," + (cmp ? 4.2 : 4.8) + "svh)," + (mob ? 40 : 56) + "px)" : "clamp(34px,min(5vw,8svh),64px)",
       revGap: mob ? "16px" : "32px",
       svcH1Gap: mob ? "24px" : "0px",
       priceGap: mob ? "36px" : "0px",
@@ -451,12 +454,12 @@ class Component extends DCLogic {
       galIntro: { maxWidth: 1600, margin: "0 auto", padding: mob ? "28px clamp(20px,5vw,72px) 32px" : "32px clamp(20px,5vw,72px) 40px", display: "flex", flexDirection: "column", gap: mob ? 12 : 16 },
       footerStyle: { background: "var(--color-accent-100)", paddingBottom: 0 },
       mob, notMob: !mob, blogTitleMin: mob ? "0" : "2.5em", toForm: this.scrollTo("b-forma"),
-      ctaCol: { order: 3, display: "flex", flexDirection: "column", gap: mob ? 14 : 20, width: "100%" },
-      statusPill: { order: 0, marginBottom: mob ? 12 : 20, animation: "b-fade12 .5s ease-out 0s both", display: "inline-flex", flexWrap: "wrap", alignItems: "center", alignSelf: "flex-start", gap: "4px 8px", boxSizing: "border-box", fontSize: mob ? 15 : 16, fontWeight: 600, lineHeight: 1.35, color: "#00363b", padding: "8px 14px", borderRadius: 999, background: hs.open ? "#E8F7EE" : "#F1F3F5" },
-      ctaRow: { animation: "b-fade12 .5s ease-out .2s both", display: "grid", gridTemplateColumns: mob ? "minmax(0,1fr)" : "repeat(2,minmax(0,1fr))", gap: 12, width: "100%", maxWidth: mob ? "none" : 440 },
-      ctaPrimary: { transition: "transform .2s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease, border-color .2s ease", color: "var(--color-bg)", fontSize: mob ? 18 : 17, boxSizing: "border-box", height: 52, padding: mob ? "0 28px" : "0 22px", border: "2px solid var(--color-accent-700)", borderRadius: 999, whiteSpace: "nowrap", gap: 10, justifyContent: "center", alignItems: "center", flex: mob ? "1 1 100%" : "0 1 auto" },
-      ctaSecondary: { transition: "transform .2s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease, border-color .2s ease", fontSize: mob ? 18 : 17, boxSizing: "border-box", height: 52, padding: mob ? "0 28px" : "0 22px", background: "transparent", color: "var(--color-accent-700)", border: "2px solid var(--color-accent-700)", borderRadius: 999, whiteSpace: "nowrap", justifyContent: "center", alignItems: "center", flex: mob ? "1 1 100%" : "0 1 auto" },
-      status: hs.text, showEmerg: false, emergPill: { animation: "b-fade12 .5s ease-out .4s both", display: "inline-flex", alignItems: "center", alignSelf: "flex-start", gap: 8, boxSizing: "border-box", padding: "8px 14px", borderRadius: 999, background: "#FDE8E6", color: "#8A1C14", fontSize: mob ? 15 : 16, fontWeight: 700, lineHeight: 1.35, textDecoration: "none", border: "1px solid #F4C2BD" }, emergLabel: hs.emerg, statusDot: { width: 10, height: 10, borderRadius: "50%", flex: "none", animation: hs.open ? "b-pulse 2s ease-out infinite" : "none", background: hs.open ? "#2fa35f" : "var(--color-neutral-500)" },
+      ctaCol: { order: 3, display: "flex", flexDirection: "column", gap: cmp ? 10 : mob ? 14 : 20, width: "100%" },
+      statusPill: { order: 0, marginBottom: cmp ? 8 : mob ? 12 : 20, animation: "b-fade12 .5s ease-out 0s both", display: "inline-flex", flexWrap: "wrap", alignItems: "center", alignSelf: "flex-start", gap: "4px 8px", boxSizing: "border-box", fontSize: cmp ? 14 : mob ? 15 : 16, fontWeight: 600, lineHeight: 1.35, color: "#00363b", padding: cmp ? "6px 12px" : "8px 14px", borderRadius: 999, background: hs.open ? "#E8F7EE" : "#F1F3F5" },
+      ctaRow: { animation: "b-fade12 .5s ease-out .2s both", display: "grid", gridTemplateColumns: mob && !cmp ? "minmax(0,1fr)" : "repeat(2,minmax(0,1fr))", gap: cmp ? 10 : 12, width: "100%", maxWidth: mob && !cmp ? "none" : 440 },
+      ctaPrimary: { transition: "transform .2s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease, border-color .2s ease", color: "var(--color-bg)", fontSize: cmp ? 14 : mob ? 18 : 17, boxSizing: "border-box", height: cmp ? 48 : 52, padding: cmp ? "0 10px" : mob ? "0 28px" : "0 22px", border: "2px solid var(--color-accent-700)", borderRadius: 999, whiteSpace: "nowrap", gap: cmp ? 6 : 10, justifyContent: "center", alignItems: "center", flex: mob ? "1 1 100%" : "0 1 auto" },
+      ctaSecondary: { transition: "transform .2s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease, border-color .2s ease", fontSize: cmp ? 14 : mob ? 18 : 17, boxSizing: "border-box", height: cmp ? 48 : 52, padding: cmp ? "0 10px" : mob ? "0 28px" : "0 22px", background: "transparent", color: "var(--color-accent-700)", border: "2px solid var(--color-accent-700)", borderRadius: 999, whiteSpace: "nowrap", justifyContent: "center", alignItems: "center", flex: mob ? "1 1 100%" : "0 1 auto" },
+      status: hs.text, statusEm: hs.em, showEmerg: false, emergPill: { animation: "b-fade12 .5s ease-out .4s both", display: "inline-flex", alignItems: "center", alignSelf: "flex-start", gap: 8, boxSizing: "border-box", padding: cmp ? "6px 12px" : "8px 14px", borderRadius: 999, background: "#FDE8E6", color: "#8A1C14", fontSize: cmp ? 13.5 : mob ? 14.5 : 16, whiteSpace: "nowrap", fontWeight: 700, lineHeight: 1.35, textDecoration: "none", border: "1px solid #F4C2BD" }, emergLabel: hs.emerg, statusDot: { width: 10, height: 10, borderRadius: "50%", flex: "none", animation: hs.open ? "b-pulse 2s ease-out infinite" : "none", background: hs.open ? "#2fa35f" : "var(--color-neutral-500)" },
       teamGrid: mob ? { display: "grid", gridTemplateColumns: "minmax(0,1fr)", gap: 32 } : { display: "grid", gridTemplateColumns: "repeat(2,minmax(0,420px))", justifyContent: "center", gap: 32 },
       barStyle: { position: "fixed", left: 0, right: 0, bottom: 0, zIndex: 85, padding: "10px 16px calc(10px + env(safe-area-inset-bottom))", background: "#ffffff", boxShadow: "0 -2px 14px rgba(0,54,59,0.14)", transform: this.state.bar ? "none" : "translateY(120%)", transition: "transform 250ms ease" },
       sending: this.state.sending, formMsg: this.state.formStatus === "ok" ? t.okMsg : this.state.formStatus === "err" ? t.errSend : "", formMsgColor: this.state.formStatus === "ok" ? "var(--color-accent-700)" : "var(--color-accent-2)",
@@ -465,10 +468,10 @@ class Component extends DCLogic {
       h1LH: "1.05",
       svcIntro: { maxWidth: 1600, margin: "0 auto", padding: mob ? "28px clamp(20px,5vw,72px) 28px" : "32px clamp(20px,5vw,72px) 64px", display: "flex", flexDirection: "column", gap: mob ? 4 : 16 },
       svcGrid: mob ? { display: "grid", gridTemplateColumns: "minmax(0,1fr)", gap: 14, width: "100%" } : { display: "grid", gridTemplateColumns: this.state.w < 1100 ? "repeat(3,minmax(0,1fr))" : "repeat(5,minmax(0,1fr))", gap: 20 },
-      hGlow: { display: "none" }, hWrap: { maxWidth: 1600, margin: "0 auto", position: "relative", display: "flex", flexDirection: mob ? "column" : "row", alignItems: mob ? "stretch" : "center", minHeight: mob ? 0 : "max(520px, calc(100svh - 166px))" },
-      hPhoto: { animation: "b-photo .9s ease-out both", position: mob ? "relative" : "absolute", order: mob ? 2 : 0, top: 0, right: 0, height: mob ? 380 : "100%", marginTop: mob ? -8 : 0, flex: "none", width: mob ? "100%" : "55%", overflow: "hidden", borderRadius: mob ? 0 : "0 0 0 24px", WebkitMaskImage: mob ? "linear-gradient(to top,#000 75%,transparent 100%)" : "linear-gradient(to right,transparent 0,#000 6%)", maskImage: mob ? "linear-gradient(to top,#000 75%,transparent 100%)" : "linear-gradient(to right,transparent 0,#000 6%)", WebkitMaskComposite: "source-in", maskComposite: "intersect" },
+      hGlow: { display: "none" }, hWrap: { maxWidth: 1600, margin: "0 auto", position: "relative", overflow: "hidden", display: "flex", flexDirection: stk ? "column" : "row", alignItems: stk ? "stretch" : "center", height: "calc(100svh - " + this.state.hOff + "px)", minHeight: stk ? 0 : 360 },
+      hPhoto: { animation: "b-photo .9s ease-out both", position: stk ? "relative" : "absolute", order: stk ? 2 : 0, top: 0, right: 0, height: stk ? "auto" : "100%", flex: stk ? "1 1 0" : "none", minHeight: stk ? "22%" : 0, width: stk ? "100%" : "55%", overflow: "hidden" },
       hShade: { position: "absolute", inset: 0, zIndex: 1, pointerEvents: "none", display: "none" },
-      hText: { position: "relative", zIndex: 2, boxSizing: "border-box", width: mob ? "auto" : L === "ru" ? "52%" : "45%", order: mob ? 1 : 0, padding: mob ? "14px clamp(16px,5vw,72px) 0" : "40px 8px 40px clamp(16px,5vw,72px)", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "flex-start", gap: 0 },
+      hText: { position: "relative", zIndex: 2, boxSizing: "border-box", width: stk ? "auto" : L === "ru" ? "52%" : "45%", order: stk ? 1 : 0, flex: "none", padding: stk ? (cmp ? "8px 16px 0" : "14px clamp(16px,5vw,72px) 0") : "24px 8px 24px clamp(16px,5vw,72px)", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "flex-start", gap: 0 },
       heroAria: (t.heroA + " " + t.heroB).split("|").join(" "),
       wordsA: [t.heroA.split("|").join(" ")].map((w, i) => ({ t: w, style: { display: "block", whiteSpace: "normal", animation: "b-fade12 .5s ease-out 0s both" } })),
       wordsB: [t.heroB.split("|").join(" ")].map((w, i) => ({ t: w, style: { display: "block", whiteSpace: "normal", animation: "b-fade12 .5s ease-out 0s both" } })),
