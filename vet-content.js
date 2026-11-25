@@ -21,23 +21,23 @@ const img = {
 const oldPhotos = Object.assign({}, img);
 Object.keys(img).forEach(k => { img[k] = ""; });
 const contact = {
-  phone1: "063 639 521", tel1: "tel:+38163639521",
-  phone2: "063 411 523", tel2: "tel:+38163411523",
+  phone1: "066 858 5854", tel1: "tel:+381668585854",
+  phone2: "066 858 5854", tel2: "tel:+381668585854",
   email: "vetprincess19@gmail.com", mailto: "mailto:vetprincess19@gmail.com",
   ig: "@va_vet_princess", igUrl: "https://www.instagram.com/va_vet_princess/",
-  viber: "viber://chat?number=%2B38163639521", whatsapp: "https://wa.me/38163639521",
+  viber: "viber://chat?number=%2B381668585854", whatsapp: "https://wa.me/381668585854",
   maps: "https://www.google.com/maps/search/?api=1&query=VA+Vet+Princess+Bulevar+despota+Stefana+61+Beograd",
   mapEmbed: "https://maps.google.com/maps?q=VA%20Vet%20Princess%2C%20Bulevar%20despota%20Stefana%2061%2C%20Beograd&z=16&output=embed"
 };
 
 const services = [
   { id: "preventiva", icon: "ph-syringe", img: img.vakc,
-    sr: { name: "Preventiva i redovna nega", short: "Pregledi, vakcinacija, čipovanje i zaštita od parazita.",
+    sr: { name: "Preventiva i pregledi", short: "Pregledi, vakcinacija, čipovanje i zaštita od parazita.",
       intro: "Redovan pregled jednom godišnje, a kod starijih ljubimaca i onih sa hroničnim bolestima i češće, omogućava veterinaru da prati opšte zdravstveno stanje, težinu, zube, srce, pluća, kožu, oči, uši i zglobove.",
-      items: ["Redovni veterinarski pregledi", "Vakcinacija pasa i mačaka", "Čipovanje i izdavanje pasoša za kućne ljubimce", "Zaštita od unutrašnjih i spoljašnjih parazita (dehelmintizacija, tretmani protiv buva i krpelja)", "Savetovanje o ishrani, nezi i ponašanju"] },
-    en: { name: "Prevention and routine care", short: "Check-ups, vaccination, microchipping and parasite control.",
+      items: ["Redovni veterinarski pregledi", "Vakcinacija pasa i mačaka", "Čipovanje i izdavanje pasoša za kućne ljubimce", "Zaštita od unutrašnjih i spoljašnjih parazita (dehelmintizacija, tretmani protiv buva i krpelja)", "Saveti o ishrani i ponašanju"] },
+    en: { name: "Prevention and check-ups", short: "Check-ups, vaccination, microchipping and parasite control.",
       intro: "A check-up once a year, and more often for older pets and those with chronic conditions, lets the vet follow overall health, weight, teeth, heart, lungs, skin, eyes, ears and joints.",
-      items: ["Routine veterinary check-ups", "Vaccination of dogs and cats", "Microchipping and pet passports", "Internal and external parasite control (deworming, flea and tick treatments)", "Advice on nutrition, care and behaviour"] } },
+      items: ["Routine veterinary check-ups", "Vaccination of dogs and cats", "Microchipping and pet passports", "Internal and external parasite control (deworming, flea and tick treatments)", "Advice on nutrition and behaviour"] } },
   { id: "dijagnostika", icon: "ph-heartbeat", img: img.orto,
     sr: { name: "Dijagnostika", short: "Laboratorija, ultrazvuk i rendgen na jednom mestu.",
       intro: "Ljubimci često umeju da prikriju bol i nelagodnost. Dijagnostika u ambulanti pomaže da na vreme otkrijemo promene koje još uvek ne daju jasne simptome.",
@@ -67,12 +67,12 @@ const services = [
       intro: "Healthy teeth and gums affect the health of the whole body. A dental check is part of every routine examination.",
       items: ["Ultrasonic scaling", "Treatment of gum and tooth disease", "Tooth extraction when necessary"] } },
   { id: "ostalo", icon: "ph-storefront", img: img.sav,
-    sr: { name: "Ostale usluge", short: "Stacionar, kućna nega, hrana i oprema.",
+    sr: { name: "Ostale usluge", short: "Stacionar, saveti za vlasnike, hrana i oprema.",
       intro: "U ambulanti možete kupiti i kvalitetnu hranu, poslastice, igračke i druge potrepštine za Vaše ljubimce.",
-      items: ["Savetovanje pre i posle intervencija", "Prodaja kvalitetne hrane, poslastica i opreme", "Kućna nega i saveti za vlasnike", "Hitni slučajevi, i van radnog vremena", "Stacionar"] },
-    en: { name: "Other services", short: "Inpatient ward, home care, food and supplies.",
+      items: ["Savetovanje pre i posle intervencija", "Prodaja kvalitetne hrane, poslastica i opreme", "Saveti za vlasnike", "Hitni slučajevi, i van radnog vremena", "Stacionar"] },
+    en: { name: "Other services", short: "Inpatient ward, advice for owners, food and supplies.",
       intro: "You can also buy quality food, treats, toys and other supplies for your pets at the clinic.",
-      items: ["Advice before and after procedures", "Quality food, treats and supplies", "Home care and advice for owners", "Emergencies, also outside working hours", "Inpatient ward"] } }
+      items: ["Advice before and after procedures", "Quality food, treats and supplies", "Advice for owners", "Emergencies, also outside working hours", "Inpatient ward"] } }
 ];
 
 const team = [
@@ -137,14 +137,14 @@ const articles = [
         "Čokolada je otrovna za pse i mačke, a tamna čokolada i kakao su najopasniji.",
         "Grožđe i suvo grožđe mogu kod pasa da izazovu oštećenje bubrega. Crni i beli luk su štetni i za pse i za mačke, bilo da su sirovi, kuvani ili u prahu.",
         "Ksilitol, zaslađivač koji se nalazi u nekim žvakama i proizvodima bez šećera, za pse je vrlo opasan.",
-        "Ako sumnjate da je ljubimac pojeo nešto od ovoga, odmah nas pozovite na 063 411 523."
+        "Ako sumnjate da je ljubimac pojeo nešto od ovoga, odmah nas pozovite na 066 858 5854."
       ] },
     en: { title: "Food from our table that harms pets", lead: "Some foods we eat every day are poisonous to dogs and cats.",
       body: [
         "Chocolate is poisonous to dogs and cats, and dark chocolate and cocoa are the most dangerous.",
         "Grapes and raisins can cause kidney damage in dogs. Onion and garlic are harmful to both dogs and cats, whether raw, cooked or powdered.",
         "Xylitol, a sweetener found in some chewing gum and sugar-free products, is very dangerous for dogs.",
-        "If you suspect your pet has eaten any of these, call us right away on 063 411 523."
+        "If you suspect your pet has eaten any of these, call us right away on 066 858 5854."
       ] } }
 ];
 
@@ -162,7 +162,7 @@ const gallery = [
 const t = {
   sr: {
     nav: { home: "Početna", services: "Usluge", team: "Tim", prices: "Cenovnik", gallery: "Pacijenti", blog: "Blog", faq: "FAQ", location: "Lokacija", contact: "Kontakt" },
-    call: "Pozovite nas", callLong: "Pozovi 063 639 521", viber: "Viber", whatsapp: "WhatsApp",
+    call: "Pozovite nas", callLong: "Pozovi 066 858 5854", viber: "Viber", whatsapp: "WhatsApp",
     clinic: "Veterinarska ambulanta", topHours: "Svakog dana 08–21", topEmergency: "Hitni slučajevi",
     heroA: "Zdrav ljubimac,", heroB: "srećan vlasnik",
     heroSub: "Dobrodošli u Vet Princess – mesto gde se briga o Vašim ljubimcima temelji na znanju, iskustvu i iskrenoj ljubavi prema životinjama.",
@@ -186,7 +186,7 @@ const t = {
     faq: [
       { q: "Kako da zakažem pregled?", a: "Pozovite nas ili popunite kontakt formu ispod." },
       { q: "Koje je radno vreme?", a: "Radimo svakog dana od 08 do 21 h." },
-      { q: "Šta da radim u hitnom slučaju?", a: "Pozovite odmah 063 411 523. Hitne slučajeve primamo i van radnog vremena." },
+      { q: "Šta da radim u hitnom slučaju?", a: "Pozovite odmah 066 858 5854. Hitne slučajeve primamo i van radnog vremena." },
       { q: "Koje životinje lečite?", a: "Psi i mačke." },
       { q: "Da li imate stacionar?", a: "Da. Imamo stacionar, hospitalizaciju i nadzor pacijenata." },
       { q: "Da li radite čipovanje i pasoš za putovanje?", a: "Da, čipujemo ljubimce i izdajemo pasoš za kućne ljubimce." },
@@ -197,7 +197,7 @@ const t = {
   },
   en: {
     nav: { home: "Home", services: "Services", team: "Team", prices: "Prices", gallery: "Patients", blog: "Blog", faq: "FAQ", location: "Location", contact: "Contact" },
-    call: "Call us", callLong: "Call 063 639 521", viber: "Viber", whatsapp: "WhatsApp",
+    call: "Call us", callLong: "Call 066 858 5854", viber: "Viber", whatsapp: "WhatsApp",
     clinic: "Veterinary clinic", topHours: "Every day 08–21", topEmergency: "Emergencies",
     heroA: "Healthy pet,", heroB: "happy owner",
     heroSub: "Welcome to Vet Princess – where care for your pets is built on knowledge, experience and a genuine love of animals.",
@@ -221,7 +221,7 @@ const t = {
     faq: [
       { q: "How do I book a check-up?", a: "Call us or fill in the contact form below." },
       { q: "What are your opening hours?", a: "We are open every day from 08:00 to 21:00." },
-      { q: "What should I do in an emergency?", a: "Call 063 411 523 immediately. We also take emergencies outside working hours." },
+      { q: "What should I do in an emergency?", a: "Call 066 858 5854 immediately. We also take emergencies outside working hours." },
       { q: "Which animals do you treat?", a: "Dogs and cats." },
       { q: "Do you have an inpatient ward?", a: "Yes. We offer an inpatient ward, hospitalisation and patient monitoring." },
       { q: "Do you microchip and issue pet passports?", a: "Yes, we microchip pets and issue pet passports." },
