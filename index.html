@@ -30,15 +30,15 @@
 </helmet>
 <div style="min-height:100vh;display:flex;flex-direction:column">
   <div id="b-top" style="background:#28cfcf;color:#00363b">
-    <div style="max-width:1600px;margin:0 auto;padding:8px clamp(16px,5vw,72px);display:flex;gap:12px;align-items:center;justify-content:space-between;font-size:14px">
+    <div style="box-sizing:border-box;width:100%;max-width:1600px;margin:0 auto;padding:8px clamp(16px,5vw,72px);display:flex;gap:12px;align-items:center;justify-content:space-between;font-size:14px">
       <a href="{{ c.maps }}" target="_blank" style="display:flex;align-items:center;gap:8px;color:#ffffff;text-decoration:none;min-width:0;line-height:1.2"><i class="ph-duotone ph-map-pin" style="font-size:20px;flex:none"></i><span style="font-size:{{ addrFont }};line-height:1.2;min-width:0">{{ t.addr }}</span></a>
-      <div role="group" aria-label="Jezik" style="flex:none;display:flex;gap:2px;padding:3px;border-radius:999px;background:var(--color-bg);box-shadow:var(--shadow-sm)">
+      <div role="group" aria-label="Jezik" style="flex:none;box-sizing:border-box;width:128px;justify-content:center;display:flex;gap:2px;padding:3px;border-radius:999px;background:var(--color-bg);box-shadow:var(--shadow-sm)">
         <sc-for list="{{ langs }}" as="l" hint-placeholder-count="3"><button type="button" onClick="{{ l.onClick }}" style="{{ l.style }}">{{ l.label }}</button></sc-for>
       </div>
     </div>
   </div>
 
-  <div id="b-nav" style="{{ navWrap }}"><nav class="nav" style="background:transparent;border:0;max-width:1600px;width:100%;margin:0 auto;padding:{{ navPad }} clamp(16px,5vw,72px);transition:padding .2s ease;flex-wrap:nowrap;gap:4px;align-items:center">
+  <div id="b-nav" style="{{ navWrap }}"><nav class="nav" style="box-sizing:border-box;background:transparent;border:0;max-width:1600px;width:100%;margin:0 auto;padding:{{ navPad }} clamp(16px,5vw,72px);transition:padding .2s ease;flex-wrap:nowrap;gap:4px;align-items:center">
     <div style="display:flex;flex-direction:row;align-items:center;gap:10px;flex:none;margin-right:auto"><sc-if value="{{ narrow }}" hint-placeholder-val="{{ false }}"><button type="button" onClick="{{ toggleMenu }}" aria-label="Meni" style="all:unset;cursor:pointer;color:#ffffff;padding:6px 2px;line-height:0"><i class="ph ph-list" style="font-size:32px"></i></button></sc-if><a href="#" onClick="{{ toTop }}" class="nav-brand" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#ffffff;flex:none">
       <img src="logo.png" alt="Basna" style="width:{{ logoSize }};height:{{ logoSize }};transition:width .2s ease,height .2s ease;border-radius:50%;display:block">
       <span style="display:flex;flex-direction:column;gap:2px"><span style="font-size:{{ brandSize }};transition:font-size .2s ease;line-height:1;letter-spacing:-0.01em">basna</span><sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}"><span style="font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.75)">{{ t.sub }}</span></sc-if></span>
@@ -46,7 +46,7 @@
     <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
       <sc-for list="{{ nav }}" as="n" hint-placeholder-count="9"><a href="#" onClick="{{ n.onClick }}" style="{{ n.style }}" style-hover="color:#2CD3D3">{{ n.label }}</a></sc-for>
     </sc-if>
-    <a class="btn" href="{{ c.tel }}" aria-label="{{ t.callLong }}" style-hover="transform:translateY(-2px);box-shadow:0 8px 18px rgba(0,0,0,.22)" style="transition:transform .2s ease,box-shadow .2s ease;background:#2CD3D3;border-color:#2CD3D3;margin-left:clamp(12px,2vw,28px);flex:none;align-self:{{ callAlign }};color:#00363b;font-size:clamp(12px,3vw,16px);padding:clamp(9px,1.4vw,11px) clamp(11px,2.4vw,22px);border-radius:999px;white-space:nowrap;gap:8px"><i class="ph-duotone ph-phone-call" style="font-size:20px"></i>{{ t.call }}</a>
+    <a class="btn" href="{{ c.tel }}" aria-label="{{ t.callLong }}" style-hover="transform:translateY(-2px);box-shadow:0 8px 18px rgba(0,0,0,.22)" style="transition:transform .2s ease,box-shadow .2s ease;background:#2CD3D3;border-color:#2CD3D3;margin-left:clamp(12px,2vw,28px);flex:none;align-self:{{ callAlign }};color:#00363b;font-size:clamp(12px,3vw,16px);box-sizing:border-box;width:128px;justify-content:center;padding:clamp(9px,1.4vw,11px) 0;border-radius:999px;white-space:nowrap;gap:8px"><i class="ph-duotone ph-phone-call" style="font-size:20px"></i>{{ t.call }}</a>
     
   </nav></div>
   <sc-if value="{{ showMenu }}" hint-placeholder-val="{{ false }}">
@@ -69,6 +69,7 @@
         <div style="{{ hShade }}"></div>
         <div style="{{ hText }}">
           <span style="{{ statusPill }}"><span style="{{ statusDot }}"></span><span>{{ status }}<sc-if value="{{ statusEm }}" hint-placeholder-val="{{ false }}"><b style="color:#B3261E;font-weight:800">{{ statusEm }}</b></sc-if></span><sc-if value="{{ showEmerg }}" hint-placeholder-val="{{ false }}"><span>·</span><a href="{{ c.tel }}" style="color:inherit;text-decoration:underline;text-underline-offset:3px">{{ emergLabel }}</a></sc-if></span>
+          <sc-if value="{{ showNote }}" hint-placeholder-val="{{ false }}"><p style="{{ noteStyle }}">{{ noteTxt }} <a href="{{ c.tel }}" style="color:inherit;font-weight:800;white-space:nowrap;text-decoration:none">066 858 5854</a></p></sc-if>
           <h1 aria-label="{{ heroAria }}" style="order:1;margin:0 0 {{ h1Mb }};font-size:{{ h1Size }};line-height:{{ h1LH }};letter-spacing:-0.02em;font-weight:800;color:#00363b">
             <sc-for list="{{ wordsA }}" as="w" hint-placeholder-count="3"><span style="{{ w.style }}">{{ w.t }}</span></sc-for><em style="font-weight:800;font-style:normal;color:#00808a"><sc-for list="{{ wordsB }}" as="w" hint-placeholder-count="2"><span style="{{ w.style }}">{{ w.t }}</span></sc-for></em>
           </h1>
@@ -310,8 +311,6 @@ class Component extends DCLogic {
     if (window.scrollY < 8) { const ta = document.getElementById("b-top"), tb = document.getElementById("b-nav"); if (ta && tb) { const v = ta.offsetHeight + tb.offsetHeight; if (Math.abs(v - this.state.hOff) > 1) this.setState({ hOff: v }); } }
     const sc = window.scrollY > 8; if (sc !== this.state.scrolled) this.setState({ scrolled: sc });
     let act = null; for (const id of ["b-usluge", "b-tim", "b-recenzije", "b-pacijenti", "b-kontakt"]) { const el = document.getElementById(id); if (el && el.offsetParent !== null && el.getBoundingClientRect().top <= 140) act = id; } if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 4 && document.getElementById("b-kontakt")) act = "b-kontakt"; if (act === "b-kontakt") act = "b-forma"; if (act !== this.state.active) this.setState({ active: act });
-    const par = document.querySelector("[data-h=par]"); if (!par) return;
-    par.style.transform = "translateY(" + Math.min(window.scrollY * 0.18, 140) + "px)";
   };
   hoursStatus(L) {
     const n = new Date(new Date().toLocaleString("en-US", { timeZone: "Europe/Belgrade" })), d = n.getDay(), m = n.getHours() + n.getMinutes() / 60;
@@ -320,7 +319,7 @@ class Component extends DCLogic {
     const W = { sr: { o: x => "Otvoreno danas do " + x + "h", n: "Sada ne radimo · Otvaramo ", t: x => "danas u " + x + "h", w: x => "sutra u " + x + "h" },
       en: { o: x => "Open today until " + pm(x), n: "Not open right now · Opening ", t: x => "today at " + x + ":00", w: x => "tomorrow at " + x + ":00" },
       ru: { o: x => "Открыто сегодня до " + x + ":00", n: "Сейчас не работаем · Открываемся ", t: x => "сегодня в " + x + ":00", w: x => "завтра в " + x + ":00" } }[L];
-    const E = { sr: "Hitni slučajevi: 066 858 5854", en: "Emergencies: 066 858 5854", ru: "Экстренные случаи: 066 858 5854" }[L];
+    const E = { sr: "Za hitne slučajeve 24/7: 066 858 5854", en: "For emergencies 24/7: 066 858 5854", ru: "Для экстренных случаев 24/7: 066 858 5854" }[L];
     const cur = S[d].find(s => m >= s[0] && m < s[1]);
     if (cur) return { open: true, text: W.o(cur[1]), em: "", emerg: E };
     const nx = S[d].find(s => s[0] > m);
@@ -419,9 +418,9 @@ class Component extends DCLogic {
     const articles = this.clean(C.articles.map(a => ({ id: a.id, ...a[L], body: a[L].body.filter(p => !/Galja|Галя|Галь/.test(p)), bg: "blog-" + a.id + ".webp", imgStyle: ai(a.id, "16/10"), imgBig: ai(a.id, "16/9", 1), href: "#/savet/" + a.id, open: this.go("savet/" + a.id) })));
     const artObj = articles.find(a => a.id === sub) || articles[0] || { title: "", lead: "", body: [], imgBig: {} };
     const faqItems = t.faq.map((q, i) => { const open = this.state.faqOpen === i; return { q: q[0], a: q[1], open, sign: open ? "−" : "+", toggle: () => this.setState({ faqOpen: open ? null : i }), boxStyle: { borderRadius: 20, background: open ? "var(--color-accent-100)" : "var(--color-neutral-100)", boxShadow: open ? "none" : "var(--shadow-sm)", transition: "background 200ms" } }; });
-    const stk = narrow, cmp = stk && this.state.hh < 760, ph = this.state.w <= 480;
+    const stk = narrow, cmp = stk && this.state.hh < 760, ph = this.state.w <= 480, wi = !stk && this.state.w >= 1200, pw = this.state.w < 1200 ? 55 : this.state.w < 1400 ? 60 : 58;
     return {
-      addrFont: mob ? "12.5px" : "14px", leadSize: ph ? "15px" : stk ? "clamp(13px," + (cmp ? 2.2 : 2) + "svh," + (mob ? 16 : 18) + "px)" : L === "ru" ? "clamp(13px,1.1vw,15.5px)" : "clamp(14.5px,1.3vw,17px)", leadLH: ph ? "1.5" : "1.6", leadMargin: ph ? "0 0 20px" : stk ? (cmp ? "8px 0 12px" : mob ? "12px 0 18px" : "16px 0 24px") : "20px 0 32px", artParas: artObj.body.map(p => { const N = "066 858 5854", i = p.indexOf(N); return i < 0 ? { a: p, has: false, b: "" } : { a: p.slice(0, i), has: true, b: p.slice(i + N.length) }; }),
+      addrFont: mob ? "12.5px" : "14px", leadSize: ph ? "15px" : stk ? "clamp(13px," + (cmp ? 2.2 : 2) + "svh," + (mob ? 16 : 18) + "px)" : wi ? (L === "ru" ? "clamp(12px,0.85vw,15.5px)" : "clamp(13px,1vw,17px)") : L === "ru" ? "clamp(13px,1.1vw,15.5px)" : "clamp(14.5px,1.3vw,17px)", leadLH: ph ? "1.5" : "1.6", leadMargin: ph ? "0 0 20px" : stk ? (cmp ? "8px 0 12px" : mob ? "12px 0 18px" : "16px 0 24px") : "20px 0 32px", artParas: artObj.body.map(p => { const N = "066 858 5854", i = p.indexOf(N); return i < 0 ? { a: p, has: false, b: "" } : { a: p.slice(0, i), has: true, b: p.slice(i + N.length) }; }),
       patPhotos: ["p2", "p4", "p7"].map(n => ({ bg: n + ".webp", style: { display: "block", aspectRatio: mob ? "3/4" : "4/3", borderRadius: mob ? 14 : 20, backgroundSize: "cover", backgroundPosition: "center", backgroundColor: "var(--color-neutral-200)", boxShadow: "var(--shadow-sm)" } })),
       patBtn: { transition: "transform .2s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease, border-color .2s ease", fontSize: mob ? 18 : 17, boxSizing: "border-box", height: 52, padding: mob ? "0 28px" : "0 22px", background: "transparent", color: "var(--color-accent-700)", border: "2px solid var(--color-accent-700)", borderRadius: 999, whiteSpace: "nowrap", justifyContent: "center", alignItems: "center", flex: mob ? "1 1 100%" : "0 0 auto", alignSelf: mob ? "stretch" : "flex-start" },
       patGrid: { display: "grid", gridTemplateColumns: "repeat(3,minmax(0,1fr))", gap: mob ? 8 : 20 },
@@ -443,12 +442,12 @@ class Component extends DCLogic {
       lbStyle: { width: "min(100%,900px)", height: "min(100%,80vh)", backgroundImage: "url(p" + [2,3,13,4,5,6,7,8,9,10,11,12,14][this.state.lb ?? 0] + ".webp)", backgroundSize: "contain", backgroundRepeat: "no-repeat", backgroundPosition: "center" },
       sliderRef: this.sliderRef, arrowInset: narrow ? "8px" : "-24px", ...this.sliderVals(Array.from({ length: 13 }, (_, i) => ({ bg: "p" + (i + 2) + ".webp" }))),
       reviews: t.reviews.map(r => ({ q: "„" + r[0] + "“", a: ["Vlasnik ljubimca", "Pet owner", "Владелец питомца"].includes(r[1]) ? REV2_NAME : r[1] })).filter(r => r.a), toReviews: this.scrollTo("b-recenzije"),
-      navWrap: { position: "sticky", top: 0, zIndex: 95, background: "#0B4F55", boxShadow: "0 4px 16px rgba(0,0,0,0.12)" },
+      navWrap: { position: "sticky", top: 0, zIndex: 95, background: "#0B4F55", boxShadow: "0 4px 16px rgba(0,0,0,0.12)", minHeight: Math.round(Math.min(60, Math.max(48, this.state.w * 0.11)) + 24), display: "flex", alignItems: "center" },
       navPad: this.state.scrolled ? "8px" : "12px", logoSize: this.state.scrolled ? "46px" : "clamp(48px,11vw,60px)", brandSize: this.state.scrolled ? "26px" : "clamp(26px,6vw,32px)", callAlign: "center",
       t, c, nav, services, narrow, wide: !narrow, hours: T[L].hours.map(x => { const p = x.split(" · "); return { d: p[0], t: p[1] }; }),
       toTop: this.scrollTo(null), showMenu: narrow && this.state.menu, toggleMenu: () => { window.scrollTo(0, 0); this.setState(s => ({ menu: !s.menu })); },
-      hParStyle: { position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: stk ? "center" : "flex-end", willChange: "transform" },
-      heroImg: (() => { const mk = !stk ? "linear-gradient(to right, transparent, #000 40px)" : ph ? "linear-gradient(to bottom, transparent, #000 28px)" : "linear-gradient(to right, transparent, #000 32px), linear-gradient(to bottom, transparent, #000 32px)"; return { maxWidth: "100%", maxHeight: "100%", width: "auto", height: "auto", display: "block", borderRadius: stk ? 20 : "0 0 0 24px", WebkitMaskImage: mk, maskImage: mk, WebkitMaskComposite: "source-in", maskComposite: "intersect" }; })(),
+      hParStyle: { position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: stk ? "center" : "flex-end" },
+      heroImg: (() => { const mk = !stk ? "linear-gradient(to right, transparent, #000 40px)" : ph ? "linear-gradient(to bottom, transparent, #000 28px)" : "linear-gradient(to right, transparent, #000 32px), linear-gradient(to bottom, transparent, #000 32px)"; return { ...(wi ? { width: "100%", height: "100%", maxWidth: "none", maxHeight: "none", objectFit: "cover", objectPosition: "50% 46%" } : { maxWidth: "100%", maxHeight: "100%", width: "auto", height: "auto" }), display: "block", borderRadius: stk ? 20 : "0 0 0 24px", WebkitMaskImage: mk, maskImage: mk, WebkitMaskComposite: "source-in", maskComposite: "intersect" }; })(),
       h1Size: ph ? "28px" : stk ? "clamp(24px,min(" + (mob ? 10 : 6.5) + "vw," + (cmp ? 4.2 : 4.8) + "svh)," + (mob ? 40 : 56) + "px)" : "clamp(34px,min(5vw,8svh),64px)",
       revGap: mob ? "16px" : "32px",
       svcH1Gap: mob ? "24px" : "0px",
@@ -461,7 +460,8 @@ class Component extends DCLogic {
       footerStyle: { background: "var(--color-accent-100)", paddingBottom: 0 },
       mob, notMob: !mob, blogTitleMin: mob ? "0" : "2.5em", toForm: this.scrollTo("b-forma"),
       ctaCol: { order: 3, display: "flex", flexDirection: "column", gap: ph ? 14 : cmp ? 10 : mob ? 14 : 20, width: "100%" },
-      statusPill: { order: 0, marginBottom: ph ? 16 : cmp ? 8 : mob ? 12 : 20, animation: "b-fade12 .5s ease-out 0s both", display: "inline-flex", flexWrap: "nowrap", whiteSpace: "nowrap", width: "max-content", maxWidth: "100%", alignItems: "center", alignSelf: "flex-start", gap: 8, boxSizing: "border-box", fontSize: ph ? (L === "ru" ? 12 : 13) : cmp ? 14 : mob ? 15 : 16, fontWeight: 600, lineHeight: 1.35, color: "#00363b", padding: cmp ? "6px 12px" : "8px 14px", borderRadius: 999, background: hs.open ? "#E8F7EE" : "#F1F3F5" },
+      showNote: !hs.open, noteTxt: { sr: "Za hitne slučajeve pozovite bilo kada:", en: "For emergencies, call anytime:", ru: "В экстренных случаях звоните в любое время:" }[L], noteStyle: { order: 0, margin: "0 0 " + (ph ? 16 : cmp ? 8 : mob ? 12 : 20) + "px", alignSelf: "flex-start", fontSize: 13, lineHeight: 1.4, color: "#0B4F55", background: "none", animation: "b-fade12 .5s ease-out .05s both" },
+      statusPill: { order: 0, marginBottom: hs.open ? (ph ? 16 : cmp ? 8 : mob ? 12 : 20) : 6, animation: "b-fade12 .5s ease-out 0s both", display: "inline-flex", flexWrap: "nowrap", whiteSpace: "nowrap", width: "max-content", maxWidth: "100%", alignItems: "center", alignSelf: "flex-start", gap: 8, boxSizing: "border-box", fontSize: ph ? (L === "ru" ? 12 : 13) : cmp ? 14 : mob ? 15 : 16, fontWeight: 600, lineHeight: 1.35, color: "#00363b", padding: cmp ? "6px 12px" : "8px 14px", borderRadius: 999, background: hs.open ? "#E8F7EE" : "#F1F3F5" },
       ctaRow: { animation: "b-fade12 .5s ease-out .2s both", display: "grid", gridTemplateColumns: mob && !cmp ? "minmax(0,1fr)" : "repeat(2,minmax(0,1fr))", gap: cmp ? 10 : 12, width: "100%", maxWidth: mob && !cmp ? "none" : 440 },
       ctaPrimary: { transition: "transform .2s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease, border-color .2s ease", color: "var(--color-bg)", fontSize: ph ? 15 : cmp ? 14 : mob ? 18 : 17, boxSizing: "border-box", height: ph || cmp ? 48 : 52, padding: ph ? "0 16px" : cmp ? "0 10px" : mob ? "0 28px" : "0 22px", border: "2px solid var(--color-accent-700)", borderRadius: 999, whiteSpace: "nowrap", gap: cmp ? 6 : 10, justifyContent: "center", alignItems: "center", flex: mob ? "1 1 100%" : "0 1 auto" },
       ctaSecondary: { transition: "transform .2s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease, border-color .2s ease", fontSize: ph ? 15 : cmp ? 14 : mob ? 18 : 17, boxSizing: "border-box", height: ph || cmp ? 48 : 52, padding: ph ? "0 16px" : cmp ? "0 10px" : mob ? "0 28px" : "0 22px", background: "transparent", color: "var(--color-accent-700)", border: "2px solid var(--color-accent-700)", borderRadius: 999, whiteSpace: "nowrap", justifyContent: "center", alignItems: "center", flex: mob ? "1 1 100%" : "0 1 auto" },
@@ -474,10 +474,10 @@ class Component extends DCLogic {
       h1LH: ph ? "1.15" : "1.05", h1Mb: ph ? "12px" : "0",
       svcIntro: { maxWidth: 1600, margin: "0 auto", padding: mob ? "28px clamp(20px,5vw,72px) 28px" : "32px clamp(20px,5vw,72px) 64px", display: "flex", flexDirection: "column", gap: mob ? 4 : 16 },
       svcGrid: mob ? { display: "grid", gridTemplateColumns: "minmax(0,1fr)", gap: 14, width: "100%" } : { display: "grid", gridTemplateColumns: this.state.w < 1100 ? "repeat(3,minmax(0,1fr))" : "repeat(5,minmax(0,1fr))", gap: 20 },
-      hGlow: { display: "none" }, hWrap: { maxWidth: 1600, margin: "0 auto", position: "relative", overflow: "hidden", display: "flex", flexDirection: stk ? "column" : "row", alignItems: stk ? "stretch" : "center", height: "calc(100svh - " + this.state.hOff + "px)", minHeight: stk ? 0 : 360 },
-      hPhoto: { animation: "b-photo .9s ease-out both", position: stk ? "relative" : "absolute", order: stk ? 2 : 0, top: 0, right: 0, height: stk ? "auto" : "100%", flex: stk ? "1 1 0" : "none", minHeight: stk ? "22%" : 0, width: stk ? "100%" : "55%", overflow: "hidden" },
+      hGlow: { display: "none" }, hWrap: { maxWidth: "none", margin: 0, position: "relative", overflow: "hidden", display: "flex", flexDirection: stk ? "column" : "row", alignItems: stk ? "stretch" : "center", height: "calc(100svh - " + this.state.hOff + "px)", minHeight: stk ? 0 : 360 },
+      hPhoto: { animation: "b-photo .9s ease-out both", position: stk ? "relative" : "absolute", order: stk ? 2 : 0, top: 0, right: 0, height: stk ? "auto" : "100%", flex: stk ? "1 1 0" : "none", minHeight: stk ? "22%" : 0, width: stk ? "100%" : pw + "%", overflow: "hidden" },
       hShade: { position: "absolute", inset: 0, zIndex: 1, pointerEvents: "none", display: "none" },
-      hText: { position: "relative", zIndex: 2, boxSizing: "border-box", width: stk ? "auto" : L === "ru" ? "52%" : "45%", order: stk ? 1 : 0, flex: "none", padding: stk ? (ph ? "14px 16px 24px" : cmp ? "8px 16px 0" : "14px clamp(16px,5vw,72px) 0") : "24px 8px 24px clamp(16px,5vw,72px)", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "flex-start", gap: 0 },
+      hText: { position: "relative", zIndex: 2, boxSizing: "border-box", width: stk ? "auto" : wi ? "calc(100% - " + pw + "% - 24px)" : "45%", order: stk ? 1 : 0, flex: "none", padding: stk ? (ph ? "14px 16px 24px" : cmp ? "8px 16px 0" : "14px clamp(16px,5vw,72px) 0") : "clamp(40px,7svh,80px) 8px 24px max(clamp(16px,5vw,72px), calc((100% - 1600px) / 2 + clamp(16px,5vw,72px)))", display: "flex", flexDirection: "column", justifyContent: stk ? "center" : "flex-start", alignItems: "flex-start", gap: 0 },
       heroAria: (t.heroA + " " + t.heroB).split("|").join(" "),
       wordsA: [t.heroA.split("|").join(" ")].map((w, i) => ({ t: w, style: { display: "block", whiteSpace: "normal", animation: "b-fade12 .5s ease-out 0s both" } })),
       wordsB: [t.heroB.split("|").join(" ")].map((w, i) => ({ t: w, style: { display: "block", whiteSpace: "normal", animation: "b-fade12 .5s ease-out 0s both" } })),
