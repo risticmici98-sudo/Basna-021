@@ -328,7 +328,7 @@ class Component extends DCLogic {
     const nx = S[d].find(s => s[0] > m);
     return { open: false, text: W.n + (nx ? W.t(nx[0]) : W.w(S[(d + 1) % 7][0][0])), em: "", emerg: E };
   }
-  go(r) { return (e) => { if (e) e.preventDefault(); location.hash = "#/" + r; }; }
+  go(r) { return (e) => { if (e) e.preventDefault(); if (this.state.menu) this.setState({ menu: false }); location.hash = "#/" + r; }; }
   anchorFromHash() { const [p, sub] = (this.state.route || "").split("/"); const el = p === "usluge" && sub && document.getElementById("usluga-" + sub); if (!el) return false; window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 96, behavior: "auto" }); return true; }
   componentDidMount() {
     if ((this.state.route || "").startsWith("usluge/")) { this.userMoved = false; ["wheel", "touchstart", "keydown"].forEach(ev => addEventListener(ev, () => { this.userMoved = true; }, { passive: true, once: true })); this.initAnchor = true; [150, 700, 1600].forEach(ms => setTimeout(() => { if (!this.userMoved) this.anchorFromHash(); }, ms)); }
